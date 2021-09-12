@@ -1,14 +1,56 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
 {% block head %}
 {% endblock head %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
+<header>
+    <div class="LogoImg">eco logo</div>
+    <div class="TextHeaderHorizontal">
+        <p class="P_header"><a href="https://google.com">some</a></p>
+        <p class="P_header"><a href="https://google.com">some</a></p>
+        <p class="P_header"><a href="https://google.com">some</a></p>
+        <p class="P_header"><a href="https://google.com">some</a></p>
+        <p class="P_header"><a href="https://google.com">some</a></p>
+        <p class="P_header"><a href="https://google.com">some</a></p>
+
+    </div>
+</header>
+
 {% block content %}
 {% endblock content %}
+<footer>
+    <div class="Footer">
+        <div class="LeftSideFooter">
+            <div class="FooterLogoImg"></div>
+            <p class="DescripFooter">We’re the leading provider of comprehensive waste management services, providing services that range from collection and disposal to recycling and renewable energy generation.
+
+</p>
+            <p class="LocationFooter">140 Horizon Circle, San Diego, CA
+
+(123) 456-7890
+
+<a class="EmailFooter">gogreen@support.com</a></p>
+        </div>
+        <div class="MiddleSideFooter">
+            <h2>Недавние новости</h2>
+            <div>
+                <a class="NewsDesc">slark</a>
+                <p class="NewsDate">2017</p>
+            </div>
+        </div>
+        <div class="RightSideFooter">zdes forma?</div>
+
+    </div>
+    <div class="UnderFooter">
+        <h1>2021 ECOEX <a href="https://google.com">privacy</a></h1>
+    </div>
+</footer>
 {% block extra_js %}
 {% endblock extra_js %}
 </body>

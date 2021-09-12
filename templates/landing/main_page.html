@@ -1,6 +1,20 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block  title %}
 
 {% endblock title %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/main_page.css' %}">
+{% endblock head %}
 {% block content %}
+    <div class="ServicesBlock">
+    <h1>Our services</h1>
+    <div class="ServicesGrid">
+        <div class="ServiceItem">
+            <div class="ServiceItem_img"></div>
+            <h2 class="ServiceItem_h2"></h2>
+            <p class="ServiceItem_p"></p>
+        </div>
+    </div>
+    </div>
 {% endblock content %}

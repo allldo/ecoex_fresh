@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+body{
+      display:flex;
+  flex-direction:column;
+    height:100vh; margin:0;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: #333333;
+    height: 7vh;
+}
+.LogoImg{
+    margin-left: 25vw;
+}
+.TextHeaderHorizontal{
+    display: flex;
+    margin-right: 15vw;
+}
+.P_header{
+    font-size: 27px;
+    margin: auto 3vw;
+
+}
+.P_header>a{
+    color: white;
+}
+.P_header>a:hover{
+    color: #62FF75;
+}
+
+/*
+Footer part
+*/
+
+.UnderFooter{
+background-color: #1b1b1b;
+}
+footer{
+     background-color: #333333;
+    margin-top: auto;
+}
+.Footer{
+    display: flex;
+    width: 60vw;
+    height: 35vh;
+    margin: 0 auto;
+
+}
+.LeftSideFooter, .MiddleSideFooter, .RightSideFooter{
+    display: flex;
+    flex-direction: column;;
+    width: 25vw;
+    margin-top: 7vh;
+}
