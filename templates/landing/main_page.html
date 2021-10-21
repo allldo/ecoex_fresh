@@ -9,12 +9,15 @@ qwe qwe fan
 {% block content %}
     <div class="ServicesBlock">
     <h1>Our services</h1>
+    <p>What</p>
     <div class="ServicesGrid">
+    {% for service in Service %}
         <div class="ServiceItem">
-            <div class="ServiceItem_img"></div>
-            <h2 class="ServiceItem_h2"></h2>
-            <p class="ServiceItem_p"></p>
+            <img class="ServiceItem_img" src="{{ service.image.url }}" >
+            <h2 class="ServiceItem_h2">{{ service.title }}</h2>
+            <p class="ServiceItem_p"> {{ service.description }} </p>
         </div>
+        {% endfor %}
     </div>
     </div>
 {% endblock content %}

@@ -1,10 +1,34 @@
 .ServicesBlock{
-    background-color: #4ac1f7;
-    height: 35vh;
+    background-color: #fafafa;
+    min-height: 15vh;
+    padding-bottom: 3vh;
 }
 .ServiceItem{
-
+width: 14vw;
 }
 .ServicesGrid{
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding:0 20vw;
 }
+.ServiceItem_h2{
+text-align: center;
+ margin-top: 2vh;
+}
+.ServiceItem_p{
+word-wrap: break-word;
+color:darkgrey;
+text-align: center;
+line-height: 1.5;
+}
+.ServiceItem_img{
+    width: 250px;
+    height: 250px;
+}
+/* @media (max-width: 600px){
+    .ServicesGrid{
+        flex-direction: column;
+    }
+} */

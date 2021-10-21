@@ -1,7 +1,11 @@
 from django.shortcuts import render
 
+from landing.models import Service
+
 # Create your views here.
 
 
 def main_page(request):
-    return render(request, 'landing/main_page.html')
+    context = {}
+    context['Service'] = Service.objects.all()
+    return render(request, 'landing/main_page.html', context)
