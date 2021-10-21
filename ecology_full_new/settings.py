@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     #apps
     'ecology_full_new',
+    'projects',
+    'landing',
 ]
 
 MIDDLEWARE = [
