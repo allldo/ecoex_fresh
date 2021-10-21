@@ -1,21 +1,21 @@
 .ServicesBlock{
     background-color: #fafafa;
-    min-height: 15vh;
     padding-bottom: 3vh;
 }
 .ServiceItem{
-width: 14vw;
+}
+.ServicesBlock>h1, .ServicesBlock>p{
+    text-align: center;
 }
 .ServicesGrid{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
-  align-items: center;
-  padding:0 20vw;
 }
 .ServiceItem_h2{
 text-align: center;
  margin-top: 2vh;
+    word-wrap: break-word;
 }
 .ServiceItem_p{
 word-wrap: break-word;
@@ -24,7 +24,7 @@ text-align: center;
 line-height: 1.5;
 }
 .ServiceItem_img{
-    width: 250px;
+    width: 320px;
     height: 250px;
 }
 /* @media (max-width: 600px){

@@ -45,17 +45,17 @@ background-color: #1b1b1b;
 footer{
      background-color: #333333;
     margin-top: auto;
+    bottom: 0;
 }
 .Footer{
     display: flex;
-    width: 60vw;
-    height: 35vh;
+    height: 95vh;
     margin: 0 auto;
 
 }
 .LeftSideFooter, .MiddleSideFooter, .RightSideFooter{
     display: flex;
-    flex-direction: column;;
+    flex-direction: column;
     width: 25vw;
     margin-top: 7vh;
 }
