@@ -1,8 +1,14 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+/* SERVICE BLOCK ENJOYER */
 .ServicesBlock{
     background-color: #fafafa;
     padding-bottom: 3vh;
 }
 .ServiceItem{
+    margin-top: 7vh;
 }
 .ServicesBlock>h1, .ServicesBlock>p{
     text-align: center;
@@ -22,13 +28,60 @@ word-wrap: break-word;
 color:darkgrey;
 text-align: center;
 line-height: 1.5;
+width: 65vw;
+margin: 0 auto;
 }
 .ServiceItem_img{
     width: 320px;
     height: 250px;
 }
-/* @media (max-width: 600px){
-    .ServicesGrid{
-        flex-direction: column;
-    }
-} */
+
+/* SERVICES BLOCK ENDS */
+
+/* FAQ BLOCK FAN */
+.Faq_block{
+background-color: #E8D8BD;
+text-align: center;
+margin-top: 5vh;
+}
+.Faq_item{
+    background-color:thistle;
+    width: 93vw;
+    margin: 5vh auto;
+    border: 1px solid thistle;
+}
+.Faq_item:hover{
+    border: 1px solid teal;
+}
+.Faq_title{
+    font-size: 18px; 
+}
+.Faq_title, .Faq_answer{
+
+    width: 85vw;
+    margin: 5vh auto;
+}
+.Faq_answer{
+    font-weight: 300;
+    color:grey;
+    font-size: 17px;
+}
+.Faq_button{
+    text-decoration: none;
+    border: 1px solid #36D986;
+    border-radius: 30px;
+    background-color: #36D986;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+/* FAQ BLOCK ENDS */
+
+/* Number part */
+
+.Number_block{
+    background-color: lightgoldenrodyellow;
+    padding: 7vh 0;
+}
+/* Number part ends */

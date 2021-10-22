@@ -5,7 +5,9 @@
 {% block head %}
 {% endblock head %}
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock title %}</title>
@@ -13,7 +15,7 @@
 <body>
 <header>
     <div class="LogoImg">eco logo</div>
-    <div class="TextHeaderHorizontal">
+    {% comment %} <div class="TextHeaderHorizontal">
         <p class="P_header"><a href="https://google.com">Главная</a></p>
         <p class="P_header"><a href="https://google.com">О нас</a></p>
         <p class="P_header"><a href="https://google.com">some</a></p>
@@ -21,7 +23,7 @@
         <p class="P_header"><a href="https://google.com">Услуги</a></p>
         <p class="P_header"><a href="https://google.com">Контакты</a></p>
 
-    </div>
+    </div> {% endcomment %}
 </header>
 
 {% block content %}

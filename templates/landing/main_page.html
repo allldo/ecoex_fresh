@@ -4,6 +4,11 @@
 qwe qwe fan
 {% endblock title %}
 {% block head %}
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" 
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" 
+        crossorigin="anonymous">
+</script>
+<script src="js/jquery.numscroll.js"></script>
     <link rel="stylesheet" href="{% static 'css/main_page.css' %}">
 {% endblock head %}
 {% block content %}
@@ -15,14 +20,37 @@ qwe qwe fan
         <div class="ServiceItem">
             <img class="ServiceItem_img" src="{{ service.image.url }}" >
             <h2 class="ServiceItem_h2">{{ service.title }}</h2>
-            <p class="ServiceItem_p"> {{ service.description }} </p>
+            <p class="ServiceItem_p"> {{ service.description|truncatewords:125 }} </p>
         </div>
         {% endfor %}
     </div>
     </div>
-    <div class="Some_info_block">
-    <h1></h1>
-    <p></p>
-    <div></div>
+    <div class="Faq_block">
+    <p>Часто задаваемые вопросы</p>
+    <h1>ЧЗВ</h1>
+    {% for faq in FAQ %}
+    <div class="Faq_item">
+    <h1 class="Faq_title">{{ faq.question }}</h1>
+    <p class="Faq_answer"> {{ faq.answer }} </p>
     </div>
+    {% endfor %}
+    <a href="https://google.com"><button class="Faq_button" >Часто задаваемые вопросы</button></a>
+    </div>
+    <section class="Number_block">
+    <div><p class="Number_number" id="first">24</p><p class="Number_label">qwefanov</p></div>
+        <div><p class="Number_number">35</p><p class="Number_label">zxcghouley</p></div>
+    <div><p class="Number_number">5</p><p class="Number_label">fan fan</p></div>
+
+    <div><p class="Number_number">45</p><p class="Number_label">akjfqwe</p></div>
+
+    </section>
 {% endblock content %}
+{% block extra_js %}
+$(function(){
+
+  $("#first").numScroll({
+    number: 123456
+  });
+
+});
+{% endblock extra_js %}
