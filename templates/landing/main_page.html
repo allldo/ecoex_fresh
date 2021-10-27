@@ -4,9 +4,7 @@
 qwe qwe fan
 {% endblock title %}
 {% block head %}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://raw.githubusercontent.com/tinywall/numscroller/master/numscroller-1.0.js"></script>
-    <link rel="stylesheet" href="{% static 'css/main_page.css' %}">
+     <link rel="stylesheet" href="{% static 'css/main_page.css' %}">
 {% endblock head %}
 {% block content %}
     <div class="ServicesBlock">
@@ -40,27 +38,13 @@ qwe qwe fan
 
     <div><p class="number" data-max="125">0</p><p class="Number_label">akjfqwe</p></div>
 
-    </section>
-<p>Fun level <span id="fun-level" style="color: red; font-size: 0px;">0 %</span>.</p>
-<p>Fun level <span id="fun-level" style="color: red; font-size: 0px;">0 %</span>.</p>
-
-<script>
- $('#fun-level').animateNumber(
-  {
-    number: 100,
-    color: 'green', // требуется jquery.color
-    'font-size': '50px',
-
-    easing: 'easeInQuad', // требуется jquery.easing
-
-    numberStep: function(now, tween) {
-      var floored_number = Math.floor(now),
-          target = $(tween.elem);
-
-      target.text(floored_number + ' %');
-    }
-  },
-  1800
-);
-</script>
+     </section> 
+ <script>
+let demo = new CountUp('myTargetElement', 6999);
+if (!demo.error) {
+  demo.start();
+} else {
+  console.error(demo.error);
+}
+ </script>
 {% endblock content %}
