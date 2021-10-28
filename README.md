@@ -13,3 +13,7 @@ To deploy locally this projet:
 6. manage.py migrate
 7. manage.py runserver
 8. enjoy
+
+
+to create fixtures:
+manage.py dumpdata data.json
