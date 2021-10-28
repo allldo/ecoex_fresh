@@ -80,7 +80,52 @@ margin-top: 5vh;
 /* Number part */
 
 .Number_block{
-    background-color: lightgoldenrodyellow;
+    background-color:linen;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     padding: 7vh 0;
+    
+}
+.Number_label{
+    color: grey;
+}
+.Number_number{
+    text-align: center;
+    font-size: 36px;
+    color:#E8D8BD;
 }
 /* Number part ends */
+
+/* Latest news block  */
+.LatestNews__Block{
+    background-color: #fafafa;
+    padding-top: 5vh;
+    
+}
+.ExactNews__img{
+    width: 280px;
+    height: 280px;
+}
+.LatestNews__Block>p{
+    text-align: center;
+    padding-bottom: 3vh;
+    font-size: 26px;
+}
+.Exact__news{
+    width: 90%;
+    margin: 0 auto;
+}
+.ExactNews__text{
+    text-align: center;
+    word-wrap: break-word;
+}
+.ExactNews_P_date{
+    color: grey;
+    margin-top: 2vh;
+}
+.ExactNews_P_description{
+    margin-top: 3vh;
+    padding-bottom: 3vh;
+}
+/* Latest news ends */

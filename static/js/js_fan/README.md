@@ -1,74 +1,81 @@
-[![Code Climate](https://codeclimate.com/github/aishek/jquery-animateNumber.png)](https://codeclimate.com/github/aishek/jquery-animateNumber)
+# jquery.countup.js
 
-jquery-animateNumber
-====================
+jquery.countup.js is a jQuery plugin that *animates* a number from zero (counting up towards it). It supports counting up:
 
-[Demo](http://aishek.github.io/jquery-animateNumber/) | [v0.0.14 – Latest Release](https://github.com/aishek/jquery-animateNumber/releases/tag/v0.0.14)
+* integers `12345`
+* floats `0.1234`
+* formatted numbers `1,234,567.00`
 
-[README на русском языке](https://github.com/aishek/jquery-animateNumber/blob/master/README.ru.md)
+Features:
 
-jQuery numbers animation plugin, adds 'number' property and step function to jQuery's animate function properties.
+* Auto-detect for integers, floats or formatted numbers
+* The plugin will also use the number of decimal places the original number is using.
+* Lightweight: ~1kb
+* Minimal setup
 
-Requires jQuery 1.7.0 or higher (tested with 2.0.3, 2.0.2, 2.0.1, 2.0.0, 1.10.2, 1.10.1, 1.10.0, 1.9.1, 1.9.0, 1.8.3, 1.8.2, 1.8.1, 1.8.0, 1.7.0).
 
-## Quick example
+## Install
+
+You can use npm or bower.
+
+```
+npm install jquery.countup.js
+```
+or
+```
+bower install jquery.countup.js
+```
+
+## Dependencies
+
+Package dependencies: [jquery](https://github.com/jquery/jquery) and [waypoints](https://github.com/imakewebthings/waypoints).
+
+## Usage
+
+### Includes
+
 ```html
-<p>Fun level <span id="fun-level" style="color: red; font-size: 0px;">0 %</span>.</p>
+<script src="jquery.min.js"></script>
+<script src="jquery.waypoints.min.js"></script>
+<script src="jquery.countup.min.js"></script>
 ```
 
-```js
-// animateNumber accepts same arguments, as animate does
-// it adds only 'number' and 'numberStep' params
-$('#fun-level').animateNumber(
-  {
-    number: 100,
-    color: 'green', // require jquery.color
-    'font-size': '50px',
+### HTML
 
-    easing: 'easeInQuad', // require jquery.easing
-
-    // optional custom step function
-    // using here to keep '%' sign after number
-    numberStep: function(now, tween) {
-      var floored_number = Math.floor(now),
-          target = $(tween.elem);
-
-      target.text(floored_number + ' %');
-    }
-  },
-  1800
-);
+```html
+<span class="counter">1,498,547.00</span>
+<span>$</span><span class="counter">7.99</span>
+<span class="counter">1455455</span>
 ```
 
-[All examples](http://aishek.github.io/jquery-animateNumber/)
+You can use `data-counter-time` and `data-counter-delay`.
 
-## Alternative plugins for same task
+```html
+<span class="counter" data-counter-time="5000" data-counter-delay="50">1981</span><br><br><br>
+<span class="counter" data-counter-time="100" data-counter-delay="20">9842</span><br><br><br>
+```
 
-* [jQuery Numerator](http://plugins.jquery.com/numerator/)
+### Jquery
 
-## Development
+```
+$('.counter').countUp();
+```
 
-1. `npm install grunt-cli -g`
-2. `npm install`
-3. `https://github.com/gmarty/grunt-closure-compiler`
-4. `grunt watch`
+**or with extra parameters (default options)**
 
-## Note on Patches / Pull Requests
+```
+$('.counter').countUp({
+    delay: 10,
+    time: 2000
+});
+```
 
-* Fork the project.
-* Make your feature addition or bug fix.
-* Send me a pull request. Bonus points for topic branches.
+* `delay` - The delay in milliseconds per number count up
+* `time` - The total duration of the count up animation
 
-## License
+**Note:** These values are overwritten with data elements.
 
-It is free software, and may be redistributed under the terms specified in the LICENSE file.
+## Social Stuff
 
-## Contributors
-
-* [Alexandr Borisov](https://github.com/aishek)
-* [Greg Thornton](https://github.com/xdissent)
-* [Tomáš Opekar](https://github.com/topik)
-
-## A bit of advertising
-
-Since 2010 lead my own software development company [Cifronomika](http://cifronomika.com/). We doing Ruby on Rails development. Feel free to contact us :-)
+* Website: http://agmstudio.io/
+* Twitter: [@AGMStudio_io](https://twitter.com/AGMStudio_io)

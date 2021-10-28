@@ -1,32 +1,29 @@
 {
-  "name": "jquery-animateNumber",
-  "version": "0.0.14",
-  "homepage": "https://github.com/aishek/jquery-animateNumber",
+  "name": "jquery.countup.js",
+  "description": "Jquery Counter plugin.",
+  "main": "index.js",
   "authors": [
-    "Alexandr Borisov <aishek@gmail.com>",
-    "Greg Thornton",
-    "Tomáš Opekar"
-  ],
-  "description": "jQuery animate number plugin",
-  "main": "jquery.animateNumber.js",
-  "keywords": [
-    "jquery",
-    "animate",
-    "number"
+    "Adrián Guerra Marrero"
   ],
   "license": "MIT",
+  "keywords": [
+    "Jquery",
+    "counter",
+    "up",
+    "count",
+    "incremental",
+    "number"
+  ],
+  "homepage": "https://github.com/AGMStudio/count-up",
   "ignore": [
     "**/.*",
-    "demo",
-    "package.json",
-    "animateNumber.jquery.json",
     "node_modules",
     "bower_components",
     "test",
     "tests"
   ],
   "dependencies": {
-    "jquery": ">=1.7.0"
+    "jquery": "^3.1.1",
+    "waypoints": "^4.0.1"
   }
 }
-

@@ -1,31 +1,37 @@
 {
-  "name": "jquery.animate-number",
-  "version": "0.0.14",
-  "dependencies": {
-    "jquery": ">= 1.7.0"
+  "name": "jquery.countup.js",
+  "version": "1.0.3",
+  "description": "Jquery Counter plugin.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-closure-compiler": "~0.0.21"
-  },
-  "description": "jQuery animate number plugin",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aishek/jquery-animateNumber.git"
+    "url": "git+https://github.com/AGMStudio/count-up.git"
   },
   "keywords": [
-    "jquery",
-    "animate",
-    "number",
-    "jquery-plugin",
-    "ecosystem:jquery"
+    "Jquery",
+    "counter",
+    "up",
+    "count",
+    "incremental",
+    "number"
   ],
-  "author": "Alexandr Borisov (aishek@gmail.com)",
+  "author": "Adrián Guerra Marrero",
   "license": "MIT",
-  "main": "jquery.animateNumber.js",
   "bugs": {
-    "url": "https://github.com/aishek/jquery-animateNumber/issues"
+    "url": "https://github.com/AGMStudio/count-up/issues"
   },
-  "homepage": "https://github.com/aishek/jquery-animateNumber"
+  "homepage": "https://github.com/AGMStudio/count-up#readme",
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "waypoints": "^4.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "pump": "^1.0.1"
+  }
 }

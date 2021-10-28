@@ -5,6 +5,9 @@ qwe qwe fan
 {% endblock title %}
 {% block head %}
      <link rel="stylesheet" href="{% static 'css/main_page.css' %}">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+<script src="{% static 'js/js_fan/jquery.countup.min.js' %}"></script>
 {% endblock head %}
 {% block content %}
     <div class="ServicesBlock">
@@ -32,19 +35,61 @@ qwe qwe fan
     <a href="https://google.com"><button class="Faq_button" >Часто задаваемые вопросы</button></a>
     </div>
     <section class="Number_block">
-    <div><p class="Number_number" id="first" data-max="24">24</p><p class="Number_label">qwefanov</p></div>
-        <div><p class="Number_number" data-max="35">35</p><p class="Number_label">zxcghouley</p></div>
-    <div><p class="Number_number" data-max="5">5</p><p class="Number_label">fan fan</p></div>
+    <div><p class="Number_number" id="first">0</p><p class="Number_label">qwefanov</p></div>
+        <div><p class="Number_number" id="second">0</p><p class="Number_label">zxcghouley</p></div>
+    <div><p class="Number_number" id="third" >0</p><p class="Number_label">fan fan</p></div>
 
-    <div><p class="number" data-max="125">0</p><p class="Number_label">akjfqwe</p></div>
+    <div><p class="Number_number" id="fourth">0</p><p class="Number_label">akjfqwe</p></div>
 
+     </section>
+     <section class="LatestNews__Block">
+        <p>Последние новости</p>
+        {% for news in Latest_News%}
+            <div class="Exact__news">
+            <img class="ExactNews__img" src="{{ news.image.url }}">
+            <div class="ExactNews__text">
+            <p class="ExactNews_P_date">{{ news.date }}</p>
+            <a href="{{ news.get_absolute_url }}"><h4>{{ news.title|truncatechars:125 }}</h4></a>
+            <p class="ExactNews_P_description">{{ news.description|truncatechars:125 }}</p>
+            </div>
+            </div>
+        {% endfor %}
      </section> 
  <script>
-let demo = new CountUp('myTargetElement', 6999);
-if (!demo.error) {
-  demo.start();
-} else {
-  console.error(demo.error);
+ 
+
+function animateValue(id, start, end, duration) {
+    if (start === end) return;
+    var range = end - start;
+    var current = start;
+    var increment = end > start? 1 : -1;
+    var stepTime = Math.abs(Math.floor(duration / range));
+    var obj = document.getElementById(id);
+    var timer = setInterval(function() {
+        current += increment;
+        obj.innerHTML = current;
+        if (current == end) {
+            clearInterval(timer);
+        }
+    }, stepTime);
+}
+let flag = true;
+let qweqwe_abuser = document.getElementById('first');
+document.onscroll = function() {
+var top = qweqwe_abuser.getBoundingClientRect().top;
+var heightScreen = document.documentElement.clientHeight;
+var body = document.querySelector("body");
+var g = top - heightScreen;
+if (g <=0){
+if (flag === true){
+animateValue("first", 0, 27, 1000);
+animateValue("second", 0, 320, 1000);
+animateValue("third", 0, 76, 1000);
+animateValue("fourth", 0, 18, 1000);
+
+flag = false;
+}
+}
 }
  </script>
 {% endblock content %}
