@@ -40,22 +40,48 @@ Footer part
 */
 
 .UnderFooter{
-background-color: #1b1b1b;
+background-color: black;
+}
+.UnderFooter>h1, .UnderFooter>h1>a{
+    font-size: 24px;
+    text-decoration: none;
+    color:dimgrey;
 }
 footer{
-     background-color: #333333;
+     background-color: black;
     margin-top: auto;
     bottom: 0;
+}
+.DescripFooter{
+color: dimgrey;
+}
+.LocationFooter{
+
+}
+.LeftSideFooter{
+
+}
+.MiddleSideFooter{
+    color:gainsboro;
+}
+.new_description:hover{
+    color: greenyellow;
+}
+.new_date{
+color: greenyellow;
+}
+.new_description{
+color: dimgrey;
 }
 .Footer{
     display: flex;
     height: 95vh;
     margin: 0 auto;
-
+    flex-direction: column;
 }
 .LeftSideFooter, .MiddleSideFooter, .RightSideFooter{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     width: 25vw;
-    margin-top: 7vh;
+    margin-top: 7vh; */
 }

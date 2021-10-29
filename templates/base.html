@@ -44,8 +44,10 @@
         <div class="MiddleSideFooter">
             <h2>Недавние новости</h2>
             <div>
-                <a class="NewsDesc">slark</a>
-                <p class="NewsDate">2017</p>
+              {% for new in RecentNews %}
+                <a class="new_description" href="{{ new.get_absolute_url }}">{{new.description}}</a>
+                <p class="new_date" >{{ new.date }}</p>
+              {% endfor%}
             </div>
         </div>
         <div class="RightSideFooter">zdes forma?</div>

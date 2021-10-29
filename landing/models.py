@@ -19,13 +19,18 @@ class FAQ(models.Model):
 class News(models.Model):
     title = models.CharField(max_length=150)
     date = models.DateField(auto_now_add=True)
-    slug = models.SlugField(max_length=75)
+    slug = models.SlugField(max_length=75, unique=True, db_index=True, verbose_name="URL")
     image = models.ImageField(upload_to="news/", null=True)
     description = models.TextField()
     
-    def get_absolute_url(self):
-        return reverse("news_detail_page", args=[self.slug])
-    
+
+
+    def save(self, *args, **kwargs):
+        self.slug = self.slug
+        super().save(*args, **kwargs)
 
     def __str__(self) -> str:
         return self.title
+        
+    def get_absolute_url(self):
+        return reverse('landing:news_detail_page', kwargs={'news_slug': self.slug})
