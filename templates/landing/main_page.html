@@ -10,6 +10,7 @@ qwe qwe fan
 <script src="{% static 'js/js_fan/jquery.countup.min.js' %}"></script>
 {% endblock head %}
 {% block content %}
+<!-- Services block -->
     <div class="ServicesBlock">
     <h1>Our services</h1>
     <p>What</p>
@@ -23,6 +24,27 @@ qwe qwe fan
         {% endfor %}
     </div>
     </div>
+<!-- Endblock services -->
+
+<!-- Block info anything could be here -->
+
+<section class="section_wrapper">
+<div class="Wrapper">
+<p class="InfoBlockTitle__p">
+lorem ipsum text smh lorem ipsum text smh lorem ipsum text smh
+</p>
+<p class="InfoBlock__p">
+    lorem ipsum aboba lorem ipsum aboba lorem ipsum aboba lorem ipsum aboba
+</p>
+<div class="InfoBlock__img">
+</div>
+</div>
+</section>
+
+<!-- End block info -->
+
+
+<!-- FAQ block  -->
     <div class="Faq_block">
     <p>Часто задаваемые вопросы</p>
     <h1>ЧЗВ</h1>
@@ -34,7 +56,7 @@ qwe qwe fan
     {% endfor %}
     <a href="https://google.com"><button class="Faq_button" >Часто задаваемые вопросы</button></a>
     </div>
-    <section class="Number_block">
+    <section class="section_wrapper">
     <div><p class="Number_number" id="first">0</p><p class="Number_label">qwefanov</p></div>
         <div><p class="Number_number" id="second">0</p><p class="Number_label">zxcghouley</p></div>
     <div><p class="Number_number" id="third" >0</p><p class="Number_label">fan fan</p></div>
@@ -42,6 +64,10 @@ qwe qwe fan
     <div><p class="Number_number" id="fourth">0</p><p class="Number_label">akjfqwe</p></div>
 
      </section>
+
+<!-- FAQ block ends -->
+
+<!-- Latest news block -->
      <section class="LatestNews__Block">
         <p>Последние новости</p>
         {% for news in Latest_News%}
@@ -55,6 +81,7 @@ qwe qwe fan
             </div>
         {% endfor %}
      </section> 
+<!-- Latest news block ends -->
  <script>
  
 

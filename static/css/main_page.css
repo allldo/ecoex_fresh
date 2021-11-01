@@ -36,8 +36,33 @@ margin: 0 auto;
     height: 250px;
 } 
 /* SERVICES BLOCK ENDS */
+/* Info block */
+.Wrapper{
+    width: 90vw;
+    margin: 0 auto;
+}
+.InfoBlockTitle__p{
+    font-size: 21px;
+}
+.InfoBlock__p{
+    word-wrap: break-word;
+    color:darkgrey;
+    text-align: left;
+    padding-bottom: 3vh;
+    padding-top: 5vh;
+}
+.InfoBlock__img{
+    background-image: url(../img/pollutuon.jpg);
+    width: 90vw;
+    height: 90vh;
+    background-size: cover;
+}
 
+/* Info block ends */
 /* FAQ BLOCK FAN */
+.section_wrapper{
+    background-color: #E8D8BD;
+}
 .Faq_block{
 background-color: #E8D8BD;
 text-align: center;
