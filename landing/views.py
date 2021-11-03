@@ -14,17 +14,23 @@ def main_page(request):
 
 
 def news_detail_page(request, news_slug):
-    print('qwe')
     context={}
     context['Exact_news'] = get_object_or_404(News, slug=news_slug)
     return render(request, 'news/news_detail.html', context)
+
 
 def faq_list_page(request):
     context = {}
     context['faqs'] = FAQ.objects.all()
     return render(request, 'faq/faq_list_page.html', context)
 
+
 def news_list_page(request):
     context = {}
-    context['NEWS'] = News.objects.all()
+    context['NEWS'] = News.objects.all().order_by('-date')
     return render(request, 'news/news_list_page.html', context)
+
+
+def contacts(request):
+    context ={}
+    return render(request, 'landing/contacts.html', context)

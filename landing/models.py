@@ -9,6 +9,7 @@ class Service(models.Model):
     def __str__(self) -> str:
         return self.title
 
+
 class FAQ(models.Model):
     question = models.CharField(max_length=150)
     answer = models.CharField(max_length=350)
@@ -16,14 +17,13 @@ class FAQ(models.Model):
     def __str__(self) -> str:
         return self.question
 
+
 class News(models.Model):
     title = models.CharField(max_length=150)
     date = models.DateField(auto_now_add=True)
     slug = models.SlugField(max_length=75, unique=True, db_index=True, verbose_name="URL")
     image = models.ImageField(upload_to="news/", null=True)
     description = models.TextField()
-    
-
 
     def save(self, *args, **kwargs):
         self.slug = self.slug
