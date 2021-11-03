@@ -1,0 +1,48 @@
+.news__wrapper{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 5vh;
+}
+.news__block{
+    display: flex;
+    margin-top: 5vh;
+    padding-bottom: 5vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.news__title{
+    font-size: 25px;
+    font-weight: 300;
+    color: black;
+}
+.news__calendar{
+    display: flex;
+    flex-direction: row;
+    align-self:flex-start;
+    margin-top: 5vh;
+
+}
+.newsCalendar__img{
+    background-image: url('../img/calendar.png');
+    width: 16px;
+    height: 16px;
+}
+.news__image{
+    margin-top: 5vh;
+    width: 300px;
+    height: 250px;
+}
+.news__description{
+    margin-top: 5vh;
+}
+.news__button{
+    
+    margin-top: 5vh;
+    border-radius: 20px;
+    border-color: none;
+    height: 30px;
+    padding: 0px 10px;
+    background-color: blueviolet;
+    color: burlywood;
+}

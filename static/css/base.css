@@ -72,6 +72,7 @@ color: greenyellow;
 }
 .new_description{
 color: dimgrey;
+word-wrap: break-word;
 }
 .Footer{
     display: flex;

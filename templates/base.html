@@ -39,13 +39,13 @@
 
 (123) 456-7890
 
-<a class="EmailFooter">gogreen@support.com</a></p>
+<a class="EmailFooter">ecologyexpert@aboba.com</a></p>
         </div>
         <div class="MiddleSideFooter">
             <h2>Недавние новости</h2>
             <div>
               {% for new in RecentNews %}
-                <a class="new_description" href="{{ new.get_absolute_url }}">{{new.description}}</a>
+                <a class="new_description" href="{{ new.get_absolute_url }}">{{ new.description|truncatechars:75 }}</a>
                 <p class="new_date" >{{ new.date }}</p>
               {% endfor%}
             </div>

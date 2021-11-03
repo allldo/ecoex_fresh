@@ -54,7 +54,7 @@ lorem ipsum text smh lorem ipsum text smh lorem ipsum text smh
     <p class="Faq_answer"> {{ faq.answer }} </p>
     </div>
     {% endfor %}
-    <a href="https://google.com"><button class="Faq_button" >Часто задаваемые вопросы</button></a>
+    <a href="faqs/"><button class="Faq_button" >Часто задаваемые вопросы</button></a>
     </div>
     <section class="Number_block">
     <div><p class="Number_number" id="first">0</p><p class="Number_label">qwefanov</p></div>
@@ -75,7 +75,7 @@ lorem ipsum text smh lorem ipsum text smh lorem ipsum text smh
             <img class="ExactNews__img" src="{{ news.image.url }}">
             <div class="ExactNews__text">
             <p class="ExactNews_P_date">{{ news.date }}</p>
-            <a href="{{ news.get_absolute_url }}"><h4>{{ news.title|truncatechars:125 }}</h4></a>
+            <a href="{{ news.get_absolute_url }}"><h4">{{ news.title|truncatechars:125 }}</h4></a>
             <p class="ExactNews_P_description">{{ news.description|truncatechars:125 }}</p>
             </div>
             </div>
