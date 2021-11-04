@@ -21,7 +21,7 @@ def news_detail_page(request, news_slug):
 
 def faq_list_page(request):
     context = {}
-    context['faqs'] = FAQ.objects.all()
+    context['FAQS'] = FAQ.objects.all()
     return render(request, 'faq/faq_list_page.html', context)
 
 

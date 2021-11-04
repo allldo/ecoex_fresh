@@ -1,6 +1,22 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block head %}
+<link rel="stylesheet" href="{% static 'css/faq.css' %}">
 {% endblock head %}
 {% block content %}
-amogus
+<h2>ЧАСТО ЗДАВАЕМЫВЕ ВОПРОСЫ</h2>
+<p>Здесь вы можете найти ответы на амогус</p> 
+<div class="outer">
+{% for faq in FAQS %}
+<details>
+            <summary>{{ faq.question }}</summary>
+            <div class="faq-content">
+                <p>{{ faq.answer }}</p>
+            </div>
+        </details>
+        
+{% endfor %}
+</div>
+
+    
 {% endblock content %}
