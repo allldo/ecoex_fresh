@@ -23,7 +23,7 @@
     flex-direction: row;
     align-self:flex-start;
     margin-top: 5vh;
-
+    color: grey;
 }
 .newsCalendar__img{
     background-image: url('../img/calendar.png');
@@ -45,10 +45,20 @@
     
     margin-top: 5vh;
     border-radius: 20px;
-    border-color: unset;
+    border-color: #c1d731;
     height: 45px;
     padding: 0px 10px;
-    background-color: rgba(193,255,154,0.98);
-    color: black;
+    background-color:#c1d731;
+    color: #fafafa;
+    border-style: solid;
     font-size: 20px;
+}
+
+.newsDescrip__button{
+    align-self: flex-start;
+}
+.news__search{
+    border-radius: 30px;
+    border-style: solid;
+    border-color: black;
 }

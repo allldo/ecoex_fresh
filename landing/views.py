@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404, render
-
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from landing.models import FAQ, News, Service
 
 # Create your views here.
@@ -27,7 +27,16 @@ def faq_list_page(request):
 
 def news_list_page(request):
     context = {}
-    context['NEWS'] = News.objects.all().order_by('-date')
+    page = request.GET.get('page', 1)  
+    paginator = Paginator(News.objects.all().order_by('-date'), 1)
+
+    try:
+        news = paginator.page(page)
+    except PageNotAnInteger:
+        news = paginator.page(1)
+    except EmptyPage:
+        news = paginator.page(paginator.num_pages)
+    context['NEWS'] = news
     return render(request, 'news/news_list_page.html', context)
 
 

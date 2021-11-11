@@ -14,6 +14,8 @@
     text-align: center;
 }
 .ServicesGrid{
+    width: 95%;
+    margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -32,7 +34,7 @@ width: 65vw;
 margin: 0 auto;
 }
 .ServiceItem_img{
-    width: 320px;
+    width: 305px;
     height: 250px;
 } 
 /* SERVICES BLOCK ENDS */
@@ -129,7 +131,7 @@ margin-top: 5vh;
     
 }
 .ExactNews__img{
-    width: 280px;
+    width: 290px;
     height: 280px;
 }
 .LatestNews__Block>p{
@@ -145,6 +147,13 @@ margin-top: 5vh;
     text-align: center;
     word-wrap: break-word;
 }
+.ExactNews__text>a{
+    color: black;
+}
+.ExactNews__text>a:hover{
+    transition: 0.3s;
+    color: #36D986;
+}
 .ExactNews_P_date{
     color: grey;
     margin-top: 2vh;
@@ -152,5 +161,6 @@ margin-top: 5vh;
 .ExactNews_P_description{
     margin-top: 3vh;
     padding-bottom: 3vh;
+    color: grey;
 }
 /* Latest news ends */

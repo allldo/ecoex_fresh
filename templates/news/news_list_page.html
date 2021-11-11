@@ -6,14 +6,38 @@
 {% endblock head %}
 {% block content %}
 <section class='news__wrapper'> 
+<div>
+<input class="news__search" placeholder='aboba'>
+</div>
 {% for news in NEWS %}
 <div class="news__block">
 <a class="news__title" href="{{ news.get_absolute_url }}">{{ news.title }}</a>
 <div class="news__calendar"><div class="newsCalendar__img"></div>{{ news.date|date:'d.M.Y' }}</div>
 <img src="{{ news.image.url }}" class="news__image" />
 <p class="news__description">{{ news.description }}</p>
-<a href="{{ news.get_absolute_url }}"><button class="news__button">Прочитать полностью</button></a>
+<a class="newsDescrip__button" href="{{ news.get_absolute_url }}"><button class="news__button">Прочитать полностью</button></a>
 </div>
 {% endfor %}
+{% if NEWS.has_other_pages %}
+  <ul class="pagination">
+    {% if NEWS.has_previous %}
+      <li><a href="?page={{ NEWS.previous_page_number }}"></a></li>
+    {% else %}
+      <li class="disabled"><span class="font: normal normal normal 14px/1 FontAwesome;"><<</span></li>
+    {% endif %}
+    {% for i in NEWS.paginator.page_range %}
+      {% if NEWS.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if NEWS.has_next %}
+      <li><a href="?page={{ NEWS.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
 </section>
 {% endblock content %}
