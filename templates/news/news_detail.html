@@ -1,6 +1,14 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block head %}
+<link rel="stylesheet" href="{% static 'css/news_detail.css' %}">
 {% endblock head %}
 {% block content %}
-<h1>NEWS {{ Exact_news.title }}</h1>
+<div class="Exact_news__wrapper">
+<h1>{{ Exact_news.title }}</h1>
+<div class="FlexCalendarDate"><div class="Exact_news__calendar"></div> <p>{{ Exact_news.date }}</p></div>
+<img class="Image_news_detail" src="{{Exact_news.image.url}}" />
+<p>{{ Exact_news.description }}</p>
+</div>
+
 {% endblock content %}

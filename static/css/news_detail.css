@@ -1,0 +1,20 @@
+.FlexCalendarDate{
+    display: flex;
+}
+.Exact_news__calendar{
+    background-image: url("../img/calendar.png");
+    width: 22px;
+    height: 22px;
+    background-size: contain;
+}
+.FlexCalendarDate>p{
+    margin-left: 3vw;
+}
+.Exact_news__wrapper{
+    width: 95%;
+    margin: 0 auto;
+}
+.Image_news_detail{
+    width:max-content;
+    height: max-content;
+}

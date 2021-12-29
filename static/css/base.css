@@ -18,6 +18,11 @@ header{
 }
 .LogoImg{
     margin-left: 25vw;
+    background-image: url("../img/logo.png");
+    width: 5vw;
+    height: 5vh;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .TextHeaderHorizontal{
     display: flex;
@@ -40,7 +45,13 @@ header{
 /*
 Footer part
 */
-
+.FooterLogoImg{
+    background-image: url("../img/logo.png");
+    width: 7vh;
+    height: 7vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 .UnderFooter{
 background-color: black;
 }
@@ -50,7 +61,7 @@ background-color: black;
     color:dimgrey;
 }
 footer{
-     background-color: black;
+     background-color: #180C1D;
     margin-top: auto;
     bottom: 0;
 }
@@ -61,7 +72,12 @@ color: dimgrey;
 
 }
 .LeftSideFooter{
-
+    width: 95%;
+    margin: 0 auto;
+}
+.MiddleSideFooter{
+    width: 95%;
+    margin: 0 auto;
 }
 .MiddleSideFooter{
     color:gainsboro;
@@ -71,10 +87,12 @@ color: dimgrey;
 }
 .new_date{
 color: greenyellow;
+padding-bottom: 3vh;
 }
 .new_description{
 color: dimgrey;
 word-wrap: break-word;
+margin-top: 3vh;
 }
 .Footer{
     display: flex;

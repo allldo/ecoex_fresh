@@ -8,10 +8,14 @@
     padding-bottom: 3vh;
 }
 .ServiceItem{
-    margin-top: 7vh;
+    margin-top: 4vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .ServicesBlock>h1, .ServicesBlock>p{
     text-align: center;
+    color: #E8D8BD;
 }
 .ServicesGrid{
     width: 95%;
@@ -36,6 +40,7 @@ margin: 0 auto;
 .ServiceItem_img{
     width: 305px;
     height: 250px;
+    align-self: center;
 } 
 /* SERVICES BLOCK ENDS */
 /* Info block */
@@ -45,6 +50,7 @@ margin: 0 auto;
 }
 .InfoBlockTitle__p{
     font-size: 21px;
+    margin-top: 3vh;
 }
 .InfoBlock__p{
     word-wrap: break-word;
@@ -63,7 +69,7 @@ margin: 0 auto;
 /* Info block ends */
 /* FAQ BLOCK FAN */
 .section_wrapper{
-    background-color: #E8D8BD;
+    background-color: #FDF5E6;
 }
 .Faq_block{
 background-color: #f7f4f0;
@@ -148,6 +154,9 @@ padding-bottom: 5vh;
 .Exact__news{
     width: 90%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .ExactNews__text{
     text-align: center;
