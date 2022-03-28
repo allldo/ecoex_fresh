@@ -1,0 +1,17 @@
+
+.BurgerBefore_After{
+            background-image: url("../img/header_img/icon1.png");
+margin: 0 auto;
+    background-size: contain;
+    width: 64px;
+    height: 64px;
+        cursor: pointer;
+}
+
+.BurgerWrapper{
+}
+#menu{
+
+    z-index: 5;
+    width: 100%;
+}

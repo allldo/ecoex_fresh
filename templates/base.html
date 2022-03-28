@@ -9,6 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{% static 'css/base.css' %}">
+<link rel="stylesheet" href="{% static 'css/mobile_header.css' %}">
+
 {% comment %} <link rel="stylesheet" href="{% static 'js/slideout-1.0.1/dist/slideout.js' %}"> {% endcomment %}
 
     <meta charset="UTF-8">
@@ -17,6 +19,7 @@
 <body>
 <header>
     <div class="LogoImg"></div>
+    <p>Ecology Expert</p>
     {% comment %} <div class="TextHeaderHorizontal">
         <p class="P_header"><a href="https://google.com">Главная</a></p>
         <p class="P_header"><a href="https://google.com">О нас</a></p>
@@ -26,17 +29,11 @@
         <p class="P_header"><a href="https://google.com">Контакты</a></p>
 
     </div> {% endcomment %}
-    <nav id="menu">
-  <header>
-    <h2>Menu</h2>
-  </header>
-</nav>
 
-<main id="panel">
-  <header>
-    <h2>Panel</h2>
-  </header>
-</main>
+        {% include 'parts/mobile_header.html' %}
+
+
+
 </header>
 
 {% block content %}
@@ -70,7 +67,22 @@
         <h1>2021 ECOEX <a href="https://google.com">privacy</a></h1>
     </div>
 </footer>
-{% block extra_js %} 
+{% block extra_js %}
+    <script>
+        function change_icon() {
+            const div_changing = document.getElementById("changing_img");
+            if (div_changing.title === '1') {
+                            div_changing.style.backgroundImage = "url(static/img/header_img/icon2.png)";
+                            div_changing.title = '3'
+                return
+              }
+            if (div_changing.title === '3'){
+               div_changing.style.backgroundImage = "url(static/img/header_img/icon1.png)";
+               div_changing.title = '1';
+            }
+        }
+
+    </script>
 {% endblock extra_js %}
 </body>
 </html>
