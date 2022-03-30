@@ -31,7 +31,7 @@ text-align: center;
 }
 .ServiceItem_p{
 word-wrap: break-word;
-color:darkgrey;
+color:#828282;
 text-align: center;
 line-height: 1.5;
 width: 65vw;
@@ -54,7 +54,7 @@ margin: 0 auto;
 }
 .InfoBlock__p{
     word-wrap: break-word;
-    color:darkgrey;
+    color:#828282;
     text-align: left;
     padding-bottom: 3vh;
     padding-top: 5vh;
@@ -69,7 +69,7 @@ margin: 0 auto;
 /* Info block ends */
 /* FAQ BLOCK FAN */
 .section_wrapper{
-    background-color: #FDF5E6;
+    background-color: #f7f4f0;
 }
 .Faq_block{
 background-color: #f7f4f0;
@@ -96,14 +96,14 @@ padding-bottom: 5vh;
 }
 .Faq_answer{
     font-weight: 300;
-    color:grey;
+    color:#828282;
     font-size: 17px;
 }
 .Faq_button{
     text-decoration: none;
-    border: 1px solid #36D986;
+    border: 1px solid #c1d731;
     border-radius: 30px;
-    background-color: #36D986;
+    background-color: #c1d731;
     padding: 15px;
     text-align: center;
     color: white;
@@ -119,7 +119,7 @@ padding-bottom: 5vh;
 /* Number part */
 
 .Number_block{
-    background-color:linen;
+    background-color:#f7f4f0;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -176,6 +176,6 @@ padding-bottom: 5vh;
 .ExactNews_P_description{
     margin-top: 3vh;
     padding-bottom: 3vh;
-    color: grey;
+    color: #828282;
 }
 /* Latest news ends */

@@ -14,7 +14,7 @@ header{
     display: flex;
     flex-direction: row;
     background-color: #333333;
-    height: 7vh;
+    height: 27vh;
     flex-wrap: wrap;
 }
 .LogoImg{
@@ -40,9 +40,26 @@ header{
 .P_header>a:hover{
     color: #62FF75;
 }
-
-
-
+.MobilePanel{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin: 0 auto;
+    background-color: white;
+    z-index: 5;
+}
+.MobilePanel>a{
+    text-align: left;
+    line-height: 2;
+    padding-left: 5vw;
+    color: #36D986;
+    font-size: 21px;
+    /*border-bottom: black solid 1px;*/
+}
+.MobilePanel>a:hover{
+    color: white;
+    background-color: #252525;
+}
 /*
 Footer part
 */
