@@ -1,10 +1,14 @@
 from django.db import models
 from django.urls import reverse
 
+
 class Service(models.Model):
     title = models.CharField(max_length=45)
     image = models.ImageField(upload_to='services/')
     description = models.CharField(max_length=650)
+
+    def get_absolute_url(self):
+        return reverse('landing:service_detail', kwargs={'service_id': self.id})
 
     def __str__(self) -> str:
         return self.title
@@ -34,3 +38,8 @@ class News(models.Model):
         
     def get_absolute_url(self):
         return reverse('landing:news_detail_page', kwargs={'news_slug': self.slug})
+
+
+# class PassDocs(models.Model):
+#     description = models.CharField(max_length=155)
+#     photo = models.ImageField(upload_to="/docs")

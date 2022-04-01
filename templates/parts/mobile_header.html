@@ -4,9 +4,9 @@
 </div>
         <div class="MobilePanel" id="Panel">
         <a href="https://www.youtube.com/">О НАС</a>
-        <a>УСЛУГИ</a>
-        <a>НОВОСТИ</a>
-        <a>КОНТАКТЫ</a>
+        <a href="{% url 'landing:services' %}">УСЛУГИ</a>
+        <a href="{% url 'landing:news_fan' %}">НОВОСТИ</a>
+        <a href="{% url 'landing:contacts_fan'%}">КОНТАКТЫ</a>
         <a>РАЗРЕШИТЕЛЬНЫЕ ДОКУМЕНТЫ</a>
         <a>ОТЗЫВЫ</a>
 

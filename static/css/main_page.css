@@ -6,6 +6,7 @@
 .ServicesBlock{
     background-color: #fafafa;
     padding-bottom: 3vh;
+    margin-top: 17vh;
 }
 .ServiceItem{
     margin-top: 4vh;
@@ -81,13 +82,15 @@ padding-bottom: 5vh;
     background-color:#fafafa;
     width: 93vw;
     margin: 5vh auto;
-    border: 1px solid thistle;
+    border: 2px solid white;
 }
 .Faq_item:hover{
-    border: 1px solid teal;
+    border: 2px solid #c1d731;
+    transition: 0.75s;
 }
 .Faq_title{
-    font-size: 18px; 
+    font-size: 18px;
+    font-weight: normal;
 }
 .Faq_title, .Faq_answer{
 
@@ -167,7 +170,7 @@ padding-bottom: 5vh;
 }
 .ExactNews__text>a:hover{
     transition: 0.3s;
-    color: #36D986;
+    color: #c1d731;
 }
 .ExactNews_P_date{
     color: grey;
@@ -179,3 +182,12 @@ padding-bottom: 5vh;
     color: #828282;
 }
 /* Latest news ends */
+
+
+@media (max-width: 404px) {
+    .ServiceItem_img{
+        width: 100%;
+    max-height: 300px;
+        background-size: cover;
+    }
+}

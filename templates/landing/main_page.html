@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'landing/base.html' %}
 {% load static %}
 {% block  title %}
 qwe qwe fan
@@ -10,6 +10,7 @@ qwe qwe fan
 <script src="{% static 'js/js_fan/jquery.countup.min.js' %}"></script>
 {% endblock head %}
 {% block content %}
+    <div class="BackgroundImgHeader"></div>
 <!-- Services block -->
     <div class="ServicesBlock">
     <h1>Our services</h1>
@@ -18,7 +19,7 @@ qwe qwe fan
     {% for service in Service %}
         <div class="ServiceItem">
             <img class="ServiceItem_img" src="{{ service.image.url }}" >
-            <h2 class="ServiceItem_h2">{{ service.title }}</h2>
+            <a href="{{ service.get_absolute_url }}" class="ServiceItem_h2">{{ service.title }}</a>
             <p class="ServiceItem_p"> {{ service.description|truncatewords:125 }} </p>
         </div>
         {% endfor %}

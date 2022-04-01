@@ -1,12 +1,20 @@
-{% extends 'base.html' %}
+{% extends 'landing/base.html' %}
 {% load static %}
 {% block head %}
+    <script type="text/javascript" src="https://vk.com/js/api/share.js?93" charset="windows-1251"></script>
 <link rel="stylesheet" href="{% static 'css/news_detail.css' %}">
 {% endblock head %}
 {% block content %}
+
 <div class="Exact_news__wrapper">
 <h1>{{ Exact_news.title }}</h1>
 <div class="FlexCalendarDate"><div class="Exact_news__calendar"></div> <p>{{ Exact_news.date }}</p></div>
+<script type="text/javascript">
+    document.write(VK.Share.button({
+      title: 'Новость с сайта Ecology-expert.kz',
+      noparse: true
+    }));
+</script>
 <img class="Image_news_detail" src="{{Exact_news.image.url}}" />
 <p>{{ Exact_news.description }}</p>
 </div>

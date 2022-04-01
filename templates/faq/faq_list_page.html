@@ -1,15 +1,16 @@
-{% extends 'base.html' %}
+{% extends 'landing/base.html' %}
 {% load static %}
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/faq.css' %}">
 {% endblock head %}
 {% block content %}
-<h2>ЧАСТО ЗДАВАЕМЫВЕ ВОПРОСЫ</h2>
-<p>Здесь вы можете найти ответы на амогус</p> 
+    <div class="Faq_block">
+<h2>Если вам нужен ответ на вопрос</h2>
+<p>Вы можете получить его здесь</p>
 <div class="outer">
 {% for faq in FAQS %}
 <details>
-            <summary>{{ faq.question }}</summary>
+            <summary>{{ forloop.counter }} {{ faq.question }}</summary>
             <div class="faq-content">
                 <p>{{ faq.answer }}</p>
             </div>
@@ -17,6 +18,6 @@
         
 {% endfor %}
 </div>
-
+</div>
     
 {% endblock content %}

@@ -1,8 +1,21 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
 .outer {
     width: 95%;
     margin: 0 auto;
     font-family: arial;
     line-height: 26px;
+}
+.Faq_block{
+    width: 90%;
+    margin: 17vh auto 0 auto;
+}
+.Faq_block>h2, .Faq_block>p{
+    text-align: left;
+}
+#LogoText{
+    color: black !important;
 }
 .faq-content {
     color:lightgray;

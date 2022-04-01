@@ -1,0 +1,18 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/services_list.css' %}">
+{% endblock head %}
+{% block content %}
+<div>
+
+</div>
+<div class="Services_wrapper">
+{% for service in Services %}
+    <img class="Service_img" src="{{ service.image.url }}" />
+    <a href="{{ service.get_absolute_url }}">{{ service.title }}</a>
+   <p> {{ service.description|truncatewords:35 }}</p>
+
+{% endfor %}
+</div>
+{% endblock content %}

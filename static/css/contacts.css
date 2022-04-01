@@ -1,3 +1,9 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
+#LogoText{
+    color: black !important;
+}
 .WrapperContacts{
     width: 95%;
     margin: 0 auto;

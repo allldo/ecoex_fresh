@@ -1,0 +1,12 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+{% block head %}
+    <title>{{ service_obj.title }}</title>
+    <link rel="stylesheet" href="{% static 'css/service_detail.css' %}">
+
+{% endblock head %}
+{% block content %}
+    <h1>{{ service_obj.title }}</h1>
+    <img src="{{ service_obj.image.url }}">
+    <p>{{ service_obj.description }}</p>
+{% endblock content %}

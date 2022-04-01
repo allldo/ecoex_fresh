@@ -18,8 +18,9 @@
 </head>
 <body>
 <header>
+
     <div class="LogoImg"></div>
-    <p>Ecology Expert</p>
+    <a href="{% url 'landing:main_page' %}" class="LogoText" id="LogoText">Ecology Expert</a>
     {% comment %} <div class="TextHeaderHorizontal">
         <p class="P_header"><a href="https://google.com">Главная</a></p>
         <p class="P_header"><a href="https://google.com">О нас</a></p>
@@ -41,8 +42,11 @@
 <footer>
     <div class="Footer">
         <div class="LeftSideFooter">
+            <div class="FooterLogo">
             <div class="FooterLogoImg"></div>
-            <p class="DescripFooter">We’re the leading provider of comprehensive waste management services, providing services that range from collection and disposal to recycling and renewable energy generation.
+            <a href="{% url 'landing:main_page' %}" class="LogoText">Ecology Expert</a>
+            </div>
+                <p class="DescripFooter">We’re the leading provider of comprehensive waste management services, providing services that range from collection and disposal to recycling and renewable energy generation.
 
 </p>
             <p class="LocationFooter">140 Horizon Circle, San Diego, CA
@@ -68,23 +72,8 @@
     </div>
 </footer>
 {% block extra_js %}
-    <script>
-        function change_icon() {
-            const div_changing = document.getElementById("changing_img");
-            const div_block = document.getElementById("Panel")
-            if (div_changing.title === '1') {
-                            div_changing.style.backgroundImage = "url(static/img/header_img/icon2.png)";
-                            div_changing.title = '3'
-                div_block.style.display = 'none'
-                return
-              }
-            if (div_changing.title === '3'){
-               div_changing.style.backgroundImage = "url(static/img/header_img/icon1.png)";
-               div_changing.title = '1';
-                div_block.style.display = 'flex'
+    <script src="{% static "js/change_icon.js" %}">
 
-            }
-        }
 
     </script>
 {% endblock extra_js %}

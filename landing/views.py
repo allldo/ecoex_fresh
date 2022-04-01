@@ -40,6 +40,23 @@ def news_list_page(request):
     return render(request, 'news/news_list_page.html', context)
 
 
+def service_detail(request, service_id):
+    service_object = get_object_or_404(Service, id=service_id)
+    context = {}
+    context['service_obj'] = service_object
+    return render(request, 'service/service_detail.html', context)
+
+
 def contacts(request):
     context ={}
     return render(request, 'landing/contacts.html', context)
+
+
+def pass_docs(request):
+    return render(request, "landing/pass_docs.html")
+
+
+def services(request):
+    context = {}
+    context['Services'] = Service.objects.all()
+    return render(request, "service/services_list.html", context)

@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'landing/base.html' %}
 {% load static %}
 {% block head %}
 <title>Новости</title>
@@ -6,16 +6,26 @@
 {% endblock head %}
 {% block content %}
 <section class='news__wrapper'> 
-<div>
-<input class="news__search" placeholder='aboba'>
-</div>
+    <form class="Search_block">
+    <input type="search" placeholder="Поиск..." class="Input_block" />
+    <button type="submit" class="Button_block">qwe</button>
+        </form>
 {% for news in NEWS %}
 <div class="news__block">
 <a class="news__title" href="{{ news.get_absolute_url }}">{{ news.title }}</a>
-<div class="news__calendar"><div class="newsCalendar__img"></div>{{ news.date|date:'d.M.Y' }}</div>
+
+<div class="news__calendar">
+    <div class="newsCalendar__img"></div>
+    <p>{{ news.date|date:'d.M.Y' }}</p>
+</div>
+
 <img src="{{ news.image.url }}" class="news__image" />
-<p class="news__description">{{ news.description }}</p>
-<a class="newsDescrip__button" href="{{ news.get_absolute_url }}"><button class="news__button">Прочитать полностью</button></a>
+
+<p class="news__description">{{ news.description|truncatewords:35 }}</p>
+
+<a class="newsDescrip__button" href="{{ news.get_absolute_url }}">
+    <button class="news__button">Прочитать полностью</button>
+</a>
 </div>
 {% endfor %}
 {% if NEWS.has_other_pages %}
