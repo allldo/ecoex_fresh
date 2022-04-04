@@ -6,5 +6,87 @@
 
 {% endblock head %}
 {% block content %}
+    {% load truncate_docs %}
+    <div class="pass_docs_wrapper">
+    <h1>СЕРТИФИКАТЫ И РАЗРЕШИТЕЛЬНЫЕ ДОКУМЕНТЫ</h1>
+    <div>
+    {% for pass_doc in docs %}
+        <h3>{{ pass_doc.title }}</h3>
+        <p class="pass_docs_description">{{ pass_doc.description }}</p>
+        <div class="pass_docs_downloadable" onclick="download('{{ pass_doc.file_pdf.url }}')">
+        <div class="pass_docs_download_icon"></div>
+        <a href="{{ pass_doc.file_pdf.url }}" download>{% truncate_docs pass_doc.file_pdf.name %}</a>
+        <p>PDF</p>
+        </div>
+        {% if pass_doc.file_pdf_2 %}
+        <div style="border-top: none;" class="pass_docs_downloadable" onclick="download('{{ pass_doc.file_pdf_2.url }}')">
+        <div class="pass_docs_download_icon"></div>
+        <a href="{{ pass_doc.file_pdf_2.url }}" download>{% truncate_docs pass_doc.file_pdf_2.name %}</a>
+        <p>PDF</p>
+        </div>
+        {% endif %}
+        {% if pass_doc.file_pdf_3 %}
+        <div style="border-top: none;" class="pass_docs_downloadable" onclick="download('{{ pass_doc.file_pdf_3.url }}')">
+        <div class="pass_docs_download_icon"></div>
+        <a href="{{ pass_doc.file_pdf_3.url }}" download>{% truncate_docs pass_doc.file_pdf_3.name %}</a>
+        <p>PDF</p>
+        </div>
+         {% endif %}
+        {% if pass_doc.file_pdf_4 %}
+        <div style="border-top: none;" class="pass_docs_downloadable" onclick="download('{{ pass_doc.file_pdf_4.url }}')">
+        <div class="pass_docs_download_icon"></div>
+        <a href="{{ pass_doc.file_pdf_4.url }}" download>{% truncate_docs pass_doc.file_pdf_4.name %}</a>
+        <p>PDF</p>
+        </div>
+         {% endif %}
+        {% if pass_doc.file_pdf_5 %}
+        <div style="border-top: none;" class="pass_docs_downloadable" onclick="download('{{ pass_doc.file_pdf_5.url }}')">
+        <div class="pass_docs_download_icon"></div>
+        <a href="{{ pass_doc.file_pdf_5.url }}" download>{% truncate_docs pass_doc.file_pdf_5.name %}</a>
+        <p>PDF</p>
+        </div>
+         {% endif %}
+        {% if pass_doc.file_pdf_6 %}
+        <div style="border-top: none;" class="pass_docs_downloadable" onclick="download('{{ pass_doc.file_pdf_6.url }}')">
+        <div class="pass_docs_download_icon"></div>
+        <a href="{{ pass_doc.file_pdf_6.url }}" download>{% truncate_docs pass_doc.file_pdf_6.name %}</a>
+        <p>PDF</p>
+        </div>
+         {% endif %}
+        {% if pass_doc.file_pdf_7 %}
+        <div style="border-top: none;" class="pass_docs_downloadable" onclick="download('{{ pass_doc.file_pdf_7.url }}')">
+        <div class="pass_docs_download_icon"></div>
+        <a href="{{ pass_doc.file_pdf_7.url }}" download>{% truncate_docs pass_doc.file_pdf_72.name %}</a>
+        <p>PDF</p>
+        </div>
+         {% endif %}
+        {% if pass_doc.file_pdf_8 %}
+        <div style="border-top: none;" class="pass_docs_downloadable" onclick="download('{{ pass_doc.file_pdf_8.url }}')">
+        <div class="pass_docs_download_icon"></div>
+        <a href="{{ pass_doc.file_pdf_8.url }}" download>{% truncate_docs pass_doc.file_pdf_8.name %}</a>
+        <p>PDF</p>
+        </div>
+        {% endif %}
 
+    {% endfor %}
+    </div>
+    </div>
+
+
+    <script>
+    function downloadURI(uri, name)
+{
+    var link = document.createElement("a");
+    link.setAttribute('download', name);
+    link.href = uri;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+ }
+    function download(file_url){
+       downloadURI(file_url)
+
+    }
+
+    </script>
 {% endblock content %}

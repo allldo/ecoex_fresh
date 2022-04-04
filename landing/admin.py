@@ -7,3 +7,5 @@ class NewsAdmin(admin.ModelAdmin):
 admin.site.register(Service)
 admin.site.register(FAQ)
 admin.site.register(News, NewsAdmin)
+admin.site.register(PassDocs)
+

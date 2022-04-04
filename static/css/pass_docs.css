@@ -1,3 +1,40 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
 #LogoText{
     color: black !important;
+}
+.pass_docs_wrapper{
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 5vh;
+}
+.pass_docs_downloadable{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 2vw;
+}
+.pass_docs_downloadable:hover{
+    cursor: pointer;
+
+}
+.pass_docs_downloadable>a, .pass_docs_downloadable>p{
+    align-self: center;
+    color: black;
+}
+.pass_docs_description{
+    padding-bottom: 2vh;
+    margin-top: 2vh;
+}
+h3{
+    margin-top: 1vh;
+}
+.pass_docs_download_icon{
+    background-image: url("../img/download.png");
+    width: 24px;
+    height: 24px;
+    background-size: contain;
 }

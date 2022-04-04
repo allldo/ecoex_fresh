@@ -6,7 +6,9 @@
 
 {% endblock head %}
 {% block content %}
-    <h1>{{ service_obj.title }}</h1>
-    <img src="{{ service_obj.image.url }}">
-    <p>{{ service_obj.description }}</p>
+    <div class="Wrapper_services">
+    <h1 class="Service_zag">{{ service_obj.title }}</h1>
+    <img alt="onload" class="Service_image" src="{{ service_obj.image.url }}">
+    <p class="Service_zag">{{ service_obj.description }}</p>
+    </div>
 {% endblock content %}

@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from landing.models import FAQ, News, Service
+from landing.models import FAQ, News, Service, PassDocs
 
 # Create your views here.
 
@@ -53,7 +53,11 @@ def contacts(request):
 
 
 def pass_docs(request):
-    return render(request, "landing/pass_docs.html")
+    context = {}
+    docs = PassDocs.objects.all()
+    context['docs'] = docs
+    context['rng'] = ['1','1','1','1','1','1','1','1']
+    return render(request, "landing/pass_docs.html", context)
 
 
 def services(request):

@@ -40,6 +40,17 @@ class News(models.Model):
         return reverse('landing:news_detail_page', kwargs={'news_slug': self.slug})
 
 
-# class PassDocs(models.Model):
-#     description = models.CharField(max_length=155)
-#     photo = models.ImageField(upload_to="/docs")
+class PassDocs(models.Model):
+    title = models.CharField(max_length=155)
+    description = models.CharField(max_length=455)
+    file_pdf = models.FileField(upload_to="docs")
+    file_pdf_2 = models.FileField(upload_to="docs", null=True, blank=True)
+    file_pdf_3 = models.FileField(upload_to="docs", null=True, blank=True)
+    file_pdf_4 = models.FileField(upload_to="docs", null=True, blank=True)
+    file_pdf_5 = models.FileField(upload_to="docs", null=True, blank=True)
+    file_pdf_6 = models.FileField(upload_to="docs", null=True, blank=True)
+    file_pdf_7 = models.FileField(upload_to="docs", null=True, blank=True)
+    file_pdf_8 = models.FileField(upload_to="docs", null=True, blank=True)
+
+    def __str__(self):
+        return self.title
