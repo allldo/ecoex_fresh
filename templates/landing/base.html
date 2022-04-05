@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 {% load static %}
+{% load cache %}
 <html lang="en">
 <head>
 {% block head %}
 {% endblock head %}
+{% cache 25000 header %}
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{% static 'css/base.css' %}">
 <link rel="stylesheet" href="{% static 'css/mobile_header.css' %}">
-
+{% endcache %}
 {% comment %} <link rel="stylesheet" href="{% static 'js/slideout-1.0.1/dist/slideout.js' %}"> {% endcomment %}
 
     <meta charset="UTF-8">
@@ -18,7 +20,7 @@
 </head>
 <body>
 <header>
-
+    {% cache 2500 head %}
     <div class="LogoImg"></div>
     <a href="{% url 'landing:main_page' %}" class="LogoText" id="LogoText">Ecology Expert</a>
     {% comment %} <div class="TextHeaderHorizontal">
@@ -34,12 +36,13 @@
         {% include 'parts/mobile_header.html' %}
 
 
-
+{% endcache %}
 </header>
 
 {% block content %}
 {% endblock content %}
 <footer>
+{% cache 3600 footer %}
     <div class="Footer">
         <div class="LeftSideFooter">
             <div class="FooterLogo">
@@ -65,7 +68,8 @@
             </div>
         </div>
         <div class="RightSideFooter">zdes forma?</div>
-
+{% endcache %}
+    {% include 'parts/form_footer.html' %}
     </div>
     <div class="UnderFooter">
         <h1>2021 ECOEX <a href="https://google.com">privacy</a></h1>

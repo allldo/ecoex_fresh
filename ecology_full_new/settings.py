@@ -69,6 +69,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'landing.context_processors.news',
+                # 'landing.context_processors.get_message',
             ],
         },
     },
@@ -139,3 +140,10 @@ PROJECT_DIR = os.path.abspath(os.path.dirname(__file__))
 FIXTURE_DIRS = (
    os.path.join(PROJECT_DIR, '/fixtures'),
 )
+
+EMAIL_HOST = 'smtp.mail.ru'
+EMAIL_PORT = 2525
+EMAIL_HOST_USER = "aldo700kdd7@mail.ru"
+EMAIL_HOST_PASSWORD = "FBp4egLF9H9zy7sMPNc8"
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False

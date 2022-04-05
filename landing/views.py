@@ -1,5 +1,9 @@
+from django.core.mail import send_mail
+from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
+from ecology_full_new import settings
 from landing.models import FAQ, News, Service, PassDocs
 
 # Create your views here.
@@ -64,3 +68,18 @@ def services(request):
     context = {}
     context['Services'] = Service.objects.all()
     return render(request, "service/services_list.html", context)
+
+
+def form_valid(request):
+    if request.headers.get('x-requested-with') == 'XMLHttpRequest' and request.method == 'POST':
+        message = f'Имя: {request.POST.get("k3k3r")}\nНомер телефона человека: {request.POST.get("number_of_phone")}\nЕго сообщение: {request.POST.get("message")}'
+        send_mail(
+            'Сообщение с сайта',
+            message,
+            settings.EMAIL_HOST_USER,
+            [settings.EMAIL_HOST_USER],
+            fail_silently=False,
+        )
+    return JsonResponse({
+        'fucking cumming': 'fucking cumming'
+    })

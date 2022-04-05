@@ -1,9 +1,11 @@
 {% extends 'landing/base.html' %}
 {% load static %}
+{% load cache %}
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/services_list.css' %}">
 {% endblock head %}
 {% block content %}
+    {% cache 3500 services %}
 <div>
 
 </div>
@@ -15,4 +17,5 @@
 
 {% endfor %}
 </div>
+    {% endcache %}
 {% endblock content %}

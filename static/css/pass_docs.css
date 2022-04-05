@@ -12,7 +12,7 @@
 .pass_docs_downloadable{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     padding: 2vw;

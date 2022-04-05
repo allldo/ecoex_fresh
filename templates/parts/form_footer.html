@@ -1,0 +1,66 @@
+{% load static %}
+<div id="loader" class="hidden"></div>
+<div id="loader_complete" class="hidden">
+    <p>Успешно отправлено!</p>
+</div>
+    <script src="{% static 'js/phonemask-main/src/phonemask.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<form method="post" onsubmit="return validateMyForm();" action="#" name="contact_form" class="footer_form">
+    {% csrf_token %}
+    <p id="LeaveInfo">Оставьте заявку и мы перезвоним!</p>
+    <input placeholder="Ваше имя *"  name="k3k3r" required>
+    <input value="+7 (___) ___ - ____" mask="+7 (___) ___ - ____" placeholder="+7 (___) ___ - ____"  name="number_of_phone" type="tel" id="phone" required>
+    <input placeholder="Сообщение *" name="message" required>
+    <button type="submit" id="btn">Отправить</button>
+</form>
+<script>
+        const cssPhone = 'input[name="number_of_phone"';
+(new phoneMask()).init(cssPhone);
+function validateMyForm(){
+    let result = phone_validation(document.contact_form.number_of_phone)
+    if (result !== true){
+        document.contact_form.number_of_phone.textContent = 'У вас йцуйцуйцуйццй';
+        return false;
+    }
+}
+function phone_validation(phone_number){
+var phoneno = /^\+([0-9])([ ])\([0-9]{3}\)([ ])([0-9]{3})[ ][-.][ ]([0-9]{4})$/;
+  if(!phone_number.value.match(phoneno))
+     {
+        return false;
+	 }
+  else{
+      return true;
+  }
+}
+$(".footer_form").submit(function (e){
+    e.preventDefault();
+    let serializedData = $(this).serialize();
+    $.ajax({
+        type: 'POST',
+        url: "{% url 'landing:form_valid' %}",
+        data: serializedData,
+        beforeSend: function (){
+            $("#loader").removeClass('hidden');
+        },
+        success: function (response){
+            $(".footer_form").trigger('reset');
+        },
+        error: function (response){
+            alert(response.error())
+        },
+        complete: function (){
+            $('#loader').addClass('hidden');
+            $('#loader_complete').removeClass('hidden');
+            setTimeout(()=>
+                {
+                                $('#loader_complete').addClass('hidden');
+                }, 2000
+            )
+
+        }
+    })
+
+})
+    </script>

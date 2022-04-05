@@ -6,6 +6,8 @@
 
 {% endblock head %}
 {% block content %}
+    {% load cache %}
+    {% cache 10000 docs %}
     {% load truncate_docs %}
     <div class="pass_docs_wrapper">
     <h1>СЕРТИФИКАТЫ И РАЗРЕШИТЕЛЬНЫЕ ДОКУМЕНТЫ</h1>
@@ -72,7 +74,7 @@
     </div>
     </div>
 
-
+{% endcache %}
     <script>
     function downloadURI(uri, name)
 {
@@ -89,4 +91,5 @@
     }
 
     </script>
+
 {% endblock content %}

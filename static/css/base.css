@@ -29,9 +29,9 @@ header{
 .LogoImg{
     margin-left: 5vw;
     background-image: url("../img/logo.png");
-    width: 5vw;
+    width: 64px;
     z-index: 2;
-    height: 5vh;
+    height: 64px;
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -140,9 +140,85 @@ margin-top: 3vh;
     margin: 0 auto;
     flex-direction: column;
 }
+.footer_form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+}
+.footer_form>input{
+    width: 75%;
+    height: 4vh;
+    padding: 1vw;
+    margin: 1vw;
+    color: darkgray;
+    font-size: 18px;
+    border: none;
+    outline:none;
+    background-color: #434f53;
+}
+.footer_form>p{
+    color: white;
+}
+.footer_form>button{
+    width: 41vw;
+    height: 6vh;
+    border-radius: 28px;
+    background-color: #c1d731;
+    font-size: 25px;
+    color: white;
+    border: none;
+    outline: none;
+    margin-top: 1vh;
+}
+.footer_form>button:hover{
+    background-color: white;
+    color: #c1d731;
+}
 .LeftSideFooter, .MiddleSideFooter, .RightSideFooter{
     /* display: flex;
     flex-direction: column;
     width: 25vw;
     margin-top: 7vh; */
+}
+
+
+/*
+loader
+*/
+#loader{
+ background-image: url("../img/loader.gif");
+    width: 64px;
+    height: 64px;
+    background-size: contain;
+    position: center;
+    margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+    z-index: 5;
+text-align: center;
+}
+#loader_complete{
+     background-image: url("../img/check-mark.png");
+    width: 64px;
+    height: 64px;
+    background-size: contain;
+    position: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3vh;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    text-align: center;
+    animation: ease-out 1s normal;
+}
+#loader_complete>p{
+    text-align: center;
+    color: white;
+    margin-top: 3vh;
+}
+.hidden{
+    display: none;
 }
