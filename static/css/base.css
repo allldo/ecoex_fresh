@@ -43,8 +43,7 @@ header{
 
 }
 .TextHeaderHorizontal{
-    display: flex;
-    margin-right: 15vw;
+    display: none;
 }
 .P_header{
     font-size: 27px;
@@ -139,6 +138,7 @@ margin-top: 3vh;
     height: 95vh;
     margin: 0 auto;
     flex-direction: column;
+    background-color: #252525;
 }
 .footer_form{
     display: flex;
@@ -221,4 +221,74 @@ text-align: center;
 }
 .hidden{
     display: none;
+}
+
+
+/* media 768px + */
+@media (min-width: 768px){
+    #menu{
+        display: none;
+    }
+    .LogoImg{
+        margin-left: 1vw;
+    }
+    .LogoText{
+        font-size: 19px;
+        font-weight: bold;
+        width: content-box;
+    }
+    .TextHeaderHorizontal{
+        display: flex;
+        z-index: 5;
+    }
+    header{
+        flex-wrap: nowrap;
+        justify-content: space-around;
+
+    }
+    .HeaderWrapper{
+        z-index: 2;
+        width: 100%;
+        background-clip: content-box;
+    }
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+}
+    #header_wrapper{
+        transition: all 150ms linear;
+    }
+    .P_header{
+        font-size: 19px;
+    }
+    .P_header>a:hover{
+        color: #c1d731;
+    }
+    .Footer{
+        padding-top: 5vh;
+        padding-bottom: 3vh;
+        flex-direction: row;
+        height: unset;
+    }
+    .footer_form>button{
+        width: 25vw;
+        margin-left: 2vw;
+    }
+    .DescripFooter{
+        margin-top: 2vh;
+    }
+    .MiddleSideFooter{
+        font-size: 15px;
+    }
+    .LeftSideFooter{
+        margin-left: 2vw;
+        font-size: 14px;
+    }
+    .footer_form>p{
+        text-align: center;
+    }
+    .footer_form>input{
+        align-self: center;
+    }
 }

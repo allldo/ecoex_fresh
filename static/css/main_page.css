@@ -146,8 +146,9 @@ padding-bottom: 5vh;
     
 }
 .ExactNews__img{
-    width: 290px;
-    height: 280px;
+   width: 405px;
+    height: 300px;
+    align-self: center;
 }
 .LatestNews__Block>p{
     text-align: center;
@@ -185,9 +186,53 @@ padding-bottom: 5vh;
 
 
 @media (max-width: 404px) {
-    .ServiceItem_img{
+    .ServiceItem_img, .ExactNews__img{
         width: 100%;
     max-height: 300px;
         background-size: cover;
+    }
+
+}
+@media (min-width: 768px) {
+    .ServicesGrid{
+        flex-direction: row;
+    }
+    .ServiceItem_img{
+        width: 235px;
+        height: 180px;
+    }
+    .ServiceItem_p{
+        width: 30vw;
+    }
+    .ServiceItem{
+
+    }
+    .Faq_wrapper{
+        display: flex;
+        flex-direction: row;
+    }
+    .Faq_item{
+        width: 30vw;
+    }
+    .Faq_title, .Faq_answer{
+        width: unset;
+    }
+    .Number_block{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .Number_number{
+        font-size: 60px;
+    }
+    .Number_label{
+        font-size: 20px;
+    }
+    .NewsWrapper{
+        display: flex;
+        flex-direction: row;
+    }
+    .ExactNews__img{
+        width: 235px;
+        height: 180px;
     }
 }

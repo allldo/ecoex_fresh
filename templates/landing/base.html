@@ -19,30 +19,50 @@
     <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
-<header>
-    {% cache 2500 head %}
+<section class="HeaderWrapper" id="header_wrapper" style="background-clip: content-box">
+<header id="main_header">
+{#    {% cache 2500 head %}#}
     <div class="LogoImg"></div>
     <a href="{% url 'landing:main_page' %}" class="LogoText" id="LogoText">Ecology Expert</a>
-    {% comment %} <div class="TextHeaderHorizontal">
-        <p class="P_header"><a href="https://google.com">Главная</a></p>
+    <div class="TextHeaderHorizontal">
         <p class="P_header"><a href="https://google.com">О нас</a></p>
-        <p class="P_header"><a href="https://google.com">some</a></p>
-        <p class="P_header"><a href="https://google.com">Прайс лист</a></p>
-        <p class="P_header"><a href="https://google.com">Услуги</a></p>
-        <p class="P_header"><a href="https://google.com">Контакты</a></p>
+        <p class="P_header"><a href="{% url 'landing:services' %}">Услуги</a></p>
+{#        <p class="P_header"><a href="https://google.com">Разрешительные документы</a></p>#}
+        <p class="P_header"><a href="{% url 'landing:news_fan' %}">Новости</a></p>
+        <p class="P_header"><a href="{% url 'landing:contacts_fan' %}">Контакты</a></p>
 
-    </div> {% endcomment %}
+    </div>
 
         {% include 'parts/mobile_header.html' %}
 
 
-{% endcache %}
+{#{% endcache %}#}
 </header>
+</section>
+<section class="HeaderWrapper" id="changing" style="visibility: hidden; display: none">
+<header>
+{#    {% cache 2500 head %}#}
+    <div class="LogoImg"></div>
+    <a href="{% url 'landing:main_page' %}" class="LogoText" id="LogoText">Ecology Expert</a>
+    <div class="TextHeaderHorizontal">
+        <p class="P_header"><a href="https://google.com">О нас</a></p>
+        <p class="P_header"><a href="{% url 'landing:services' %}">Услуги</a></p>
+{#        <p class="P_header"><a href="https://google.com">Разрешительные документы</a></p>#}
+        <p class="P_header"><a href="{% url 'landing:news_fan' %}">Новости</a></p>
+        <p class="P_header"><a href="{% url 'landing:contacts_fan' %}">Контакты</a></p>
 
+    </div>
+
+        {% include 'parts/mobile_header.html' %}
+
+
+{#{% endcache %}#}
+</header>
+</section>
 {% block content %}
 {% endblock content %}
 <footer>
-{% cache 3600 footer %}
+{#{% cache 3600 footer %}#}
     <div class="Footer">
         <div class="LeftSideFooter">
             <div class="FooterLogo">
@@ -67,8 +87,7 @@
               {% endfor%}
             </div>
         </div>
-        <div class="RightSideFooter">zdes forma?</div>
-{% endcache %}
+{#{% endcache %}#}
     {% include 'parts/form_footer.html' %}
     </div>
     <div class="UnderFooter">
@@ -80,6 +99,33 @@
 
 
     </script>
+    <script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("header_wrapper");
+let changing = document.getElementById("changing");
+let main_header = document.getElementById("main_header");
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+    header.style.backgroundColor = "#353535";
+    main_header.style.paddingBottom = "0";
+    changing.style.display = "block";
+  } else {
+    header.classList.remove("sticky");
+    header.style.backgroundColor = "transparent";
+    main_header.style.paddingBottom = "15vw";
+    changing.style.display = "none";
+
+  }
+}
+</script>
 {% endblock extra_js %}
 </body>
 </html>

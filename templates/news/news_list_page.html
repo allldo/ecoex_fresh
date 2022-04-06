@@ -19,7 +19,7 @@
     <p>{{ news.date|date:'d.M.Y' }}</p>
 </div>
 
-<img src="{{ news.image.url }}" class="news__image" />
+<a href="{{ news.get_absolute_url }}"><img src="{{ news.image.url }}" class="news__image" /></a>
 
 <p class="news__description">{{ news.description|truncatewords:35 }}</p>
 
@@ -31,21 +31,23 @@
 {% if NEWS.has_other_pages %}
   <ul class="pagination">
     {% if NEWS.has_previous %}
-      <li><a href="?page={{ NEWS.previous_page_number }}"></a></li>
+      <li><a href="?page=1" class="available_page"><<</a></li>
+      <li><a href="?page={{ NEWS.previous_page_number }}" class="available_page"><</a></li>
     {% else %}
-      <li class="disabled"><span class="font: normal normal normal 14px/1 FontAwesome;"><<</span></li>
+      <li class="disabled"><span class="font: normal normal normal 14px/1 FontAwesome;"><</span></li>
     {% endif %}
     {% for i in NEWS.paginator.page_range %}
       {% if NEWS.number == i %}
-        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+        <li class="active"><span>{{ i }} </span></li>
       {% else %}
-        <li><a href="?page={{ i }}">{{ i }}</a></li>
+        <li><a href="?page={{ i }}" class="available_page">{{ i }}</a></li>
       {% endif %}
     {% endfor %}
     {% if NEWS.has_next %}
-      <li><a href="?page={{ NEWS.next_page_number }}">&raquo;</a></li>
+      <li><a href="?page={{ NEWS.next_page_number }}" class="available_page">></a></li>
+        <li><a href="?page={{ NEWS.paginator.num_pages }}" class="available_page">>></a></li>
     {% else %}
-      <li class="disabled"><span>&raquo;</span></li>
+      <li class="disabled"><span>></span></li>
     {% endif %}
   </ul>
 {% endif %}

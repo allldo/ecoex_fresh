@@ -18,7 +18,7 @@ qwe qwe fan
     <div class="ServicesGrid">
     {% for service in Service %}
         <div class="ServiceItem">
-            <img class="ServiceItem_img" src="{{ service.image.url }}" >
+            <a href="{{ service.get_absolute_url }}"><img class="ServiceItem_img" src="{{ service.image.url }}" ></a>
             <a href="{{ service.get_absolute_url }}" class="ServiceItem_h2">{{ service.title }}</a>
             <p class="ServiceItem_p"> {{ service.description|truncatewords:125 }} </p>
         </div>
@@ -47,15 +47,17 @@ lorem ipsum text smh lorem ipsum text smh lorem ipsum text smh
 
 <!-- FAQ block  -->
     <div class="Faq_block">
-    <p style="color: #e7ceb1;">Часто задаваемые вопросы</p>
+    <p style="color: #e7ceb1; margin-top: 2vh;">Часто задаваемые вопросы</p>
     <h1>ЧЗВ</h1>
+    <div class="Faq_wrapper">
     {% for faq in FAQ %}
     <div class="Faq_item">
     <h1 class="Faq_title">{{ faq.question }}</h1>
     <p class="Faq_answer"> {{ faq.answer }} </p>
     </div>
     {% endfor %}
-    <a href="faqs/"><button class="Faq_button" >К ВОПРОСАМ</button></a>
+    </div>
+    <a href="{% url 'landing:faq_fan' %}"><button class="Faq_button" >К ВОПРОСАМ</button></a>
     </div>
     <section class="Number_block">
     <div><p class="Number_number" id="first">0</p><p class="Number_label">qwefanov</p></div>
@@ -71,9 +73,10 @@ lorem ipsum text smh lorem ipsum text smh lorem ipsum text smh
 <!-- Latest news block -->
      <section class="LatestNews__Block">
         <p>Последние новости</p>
+     <div class="NewsWrapper">
         {% for news in Latest_News%}
             <div class="Exact__news">
-            <img class="ExactNews__img" src="{{ news.image.url }}">
+            <a href="{{ news.get_absolute_url }}"><img class="ExactNews__img" src="{{ news.image.url }}"></a>
             <div class="ExactNews__text">
             <p class="ExactNews_P_date">{{ news.date }}</p>
             <a href="{{ news.get_absolute_url }}"><h4>{{ news.title|truncatechars:125 }}</h4></a>
@@ -81,6 +84,7 @@ lorem ipsum text smh lorem ipsum text smh lorem ipsum text smh
             </div>
             </div>
         {% endfor %}
+     </div>
      </section>
 <!-- Latest news block ends -->
  <script>

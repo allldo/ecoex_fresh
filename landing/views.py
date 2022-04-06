@@ -32,7 +32,7 @@ def faq_list_page(request):
 def news_list_page(request):
     context = {}
     page = request.GET.get('page', 1)  
-    paginator = Paginator(News.objects.all().order_by('-date'), 1)
+    paginator = Paginator(News.objects.all().order_by('-date'), 4)
 
     try:
         news = paginator.page(page)
