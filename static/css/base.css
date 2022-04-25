@@ -225,7 +225,7 @@ text-align: center;
 
 
 /* media 768px + */
-@media (min-width: 768px){
+@media (min-width: 768px) and (max-width: 1279px){
     #menu{
         display: none;
     }
@@ -257,7 +257,7 @@ text-align: center;
         width: 100%;
 }
     #header_wrapper{
-        transition: all 150ms linear;
+        /*transition: all 150ms linear;*/
     }
     .P_header{
         font-size: 19px;
@@ -287,6 +287,107 @@ text-align: center;
     }
     .footer_form>p{
         text-align: center;
+    }
+    .footer_form>input{
+        align-self: center;
+    }
+}
+@media (min-width: 1280px) {
+    #menu{
+        display: none;
+    }
+    #LogoText{
+        margin-right: 15vw;
+    }
+    .LogoImg{
+        margin-left: 15vw;
+    }
+    .LogoText{
+        font-size: 19px;
+        font-weight: bold;
+        width: content-box;
+    }
+    .TextHeaderHorizontal{
+        display: flex;
+        z-index: 5;
+        margin-right: 20vw;
+    }
+    .BackgroundImgHeader{
+        height: 100%;
+    }
+    header{
+        flex-wrap: nowrap;
+        justify-content: space-around;
+
+    }
+
+    .HeaderWrapper{
+        z-index: 2;
+        width: 100%;
+        background-clip: content-box;
+    }
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+}
+    #header_wrapper{
+        /*transition: all 150ms linear;*/
+    }
+    .P_header{
+        font-size: 19px;
+    }
+    .P_header>a:hover{
+        color: #c1d731;
+    }
+    footer{
+        background-color: #252525;
+    }
+    .Footer{
+        padding-top: 5vh;
+        padding-bottom: 3vh;
+        flex-direction: row;
+        height: unset;
+        width: 75%;
+    }
+    .footer_form>input{
+        margin: 5px;
+    }
+    .footer_form>button{
+        width: 25vw;
+        margin-left: 2vw;
+    }
+    .DescripFooter{
+        margin-top: 2vh;
+        font-size: 20px;
+    }
+    .MiddleSideFooter{
+        font-size: 15px;
+    }
+    .LocationFooter{
+        font-size: 20px;
+    }
+    .MiddleSideFooter>h2{
+        padding-bottom: 2vh;
+    }
+    .new_description{
+        font-size: 18px;
+    }
+    .new_date{
+        font-size: 17px;
+    }
+    .LeftSideFooter{
+        margin-left: 2vw;
+        font-size: 14px;
+        margin-right: 1vw;
+    }
+    .footer_form>p{
+        font-size: 24px;
+        text-align: center;
+        padding-bottom: 1vh;
+    }
+    .footer_form>input:not(:nth-child(5n)){
+        height: 1vh;
     }
     .footer_form>input{
         align-self: center;

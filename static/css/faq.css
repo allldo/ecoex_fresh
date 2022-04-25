@@ -47,3 +47,22 @@ details[open] summary ~ * {
         margin-top: 0px;
     }
 }
+
+@media (min-width: 1280px) {
+    .Faq_block{
+        margin-top: 22vh;
+        padding-bottom: 10vh;
+    }
+    .Faq_block>h2 {
+        font-size: 60px;
+    }
+    .Faq_block>p{
+        font-size: 30px;
+    }
+    summary{
+        font-size: 22px;
+    }
+    .faq-content{
+        font-size: 24px;
+    }
+}

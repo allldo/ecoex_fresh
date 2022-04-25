@@ -3,21 +3,29 @@
 {% block head %}
     <title>Контакты</title>
     <link rel="stylesheet" href="{% static 'css/contacts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header_non_main.css' %}">
 
 {% endblock head %}
 {% block content %}
+    {% include 'parts/upper_kok.html' %}
     <section class="WrapperContacts">
     <div>
     <h4>Адрес</h4>
-    <p>Ekbwf geirbyf ljv </p>
+    <p>Улица Маркова</p>
     <h4>Телефоны</h4>
     <p>+777777777</p>
     <h4>E-mail</h4>
-    <a>zxcqwe@gmail.com</a>
+    <a>ecoex@gmail.com</a>
     </div>
     <div class="map-responsive">
-    <iframe src="https://www.google.com/maps/embed/v1/search
-  ?key=AIzaSyDVboJZyMRi-G93NasQtoIoMJQjvs3cn4Q&q=?&center=" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3771.027721542219!2d76.85172085811745!3d43.21242928870803!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2skz!4v1650909945092!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     </section>
+        <script src="{% static "js/non_main_page_header.js" %}"></script>
+    <script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+
+</script>
 {% endblock content %}

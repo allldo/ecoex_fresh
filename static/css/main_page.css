@@ -30,6 +30,9 @@ text-align: center;
  margin-top: 2vh;
     word-wrap: break-word;
 }
+.Image_text{
+    display: none;
+}
 .ServiceItem_p{
 word-wrap: break-word;
 color:#828282;
@@ -61,7 +64,7 @@ margin: 0 auto;
     padding-top: 5vh;
 }
 .InfoBlock__img{
-    background-image: url(../img/pollutuon.jpg);
+    background-image: url(../img/char.jpg);
     width: 90vw;
     height: 90vh;
     background-size: cover;
@@ -235,4 +238,80 @@ padding-bottom: 5vh;
         width: 235px;
         height: 180px;
     }
+}
+
+@media (min-width: 1280px) {
+    .Image_text{
+        display: block;
+        font-size: 72px;
+        color: white;
+        width: 75vw;
+        position: absolute;
+        z-index: 1;
+        top: 20vh;
+        left: 10vw;
+    }
+    .ServicesGrid{
+        flex-direction: row;
+        width: 88%;
+    }
+    .ServicesBlock{
+        margin-top: 70vh;
+    }
+    .ServiceItem_img{
+        width: 455px;
+        height: 280px;
+    }
+    .ServiceItem_p{
+        width: 25vw;
+        font-size: 18px;
+    }
+    .ServiceItem_h2{
+        font-size: 22px;
+    }
+    .ServiceItem{
+
+    }
+    .Faq_wrapper{
+        display: flex;
+        flex-direction: row;
+        width: 60%;
+        margin: 0 auto;
+    }
+    .Faq_item{
+        width: 20vw;
+        padding: 1vw;
+        margin: 1vw;
+    }
+    .Faq_title, .Faq_answer{
+        width: unset;
+        font-size: 22px;
+    }
+    .Number_block{
+        flex-direction: row;
+        padding-right: 18vw;
+        padding-left: 18vw;
+    }
+    .Number_number{
+        font-size: 65px;
+        font-weight: 500;
+    }
+    .Number_label{
+        font-size: 20px;
+    }
+    .NewsWrapper{
+        display: flex;
+        flex-direction: row;
+        width: 85%;
+        margin: 0 auto;
+    }
+    .ExactNews__img{
+        width: 455px;
+        height: 280px;
+    }
+    .ExactNews_P_date, .ExactNews__text>a>h4, .ExactNews_P_description{
+        font-size: 20px;
+        width: 25vw;
+    }
+
 }

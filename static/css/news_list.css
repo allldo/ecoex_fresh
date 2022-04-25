@@ -143,3 +143,86 @@ li{
 .disabled{
     display: none;
 }
+
+@media (min-width: 1280px) {
+.news__wrapper{
+    width: 47%;
+    margin-top: 20vh;
+}
+.news__block{
+    align-items: flex-start;
+}
+
+.news__title{
+    text-align: left;
+}
+.news__title:hover{
+    color: #c1d731;
+}
+.news__calendar{
+
+}
+.news__description{
+
+}
+.news__image{
+    width: 900px;
+    height: 500px;
+}
+
+.news__button{
+    border-radius: 28px;
+    height: 55px;
+    padding: 0px 20px;
+}
+.news__button:hover{
+    background-color: white;
+    color: #c1d731;
+}
+.pagination{
+    justify-content: flex-start;
+}
+.pagination>li{
+    margin: 10px;
+    font-size: 20px;
+}
+
+.Search_background{
+    position: absolute;
+    background-image: url("../img/charyyn.png");
+    width: 100%;
+    top: 15vh;
+    height: 40vh;
+    background-size: unset;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+}
+.Search_background>p{
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+    margin: 14vh 0 0 23vw;
+    width: fit-content;
+}
+.Search_block{
+    color: white;
+    width: 15%;
+    height: 6vh;
+    margin: 14vh 0 0 5vw;
+}
+.search{
+
+}
+.Button_block{
+    margin-left: 21vw;
+}
+
+
+
+
+
+
+
+
+}

@@ -3,6 +3,7 @@
 {% block head %}
     <title>{{ service_obj.title }}</title>
     <link rel="stylesheet" href="{% static 'css/service_detail.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header_non_main.css' %}">
 
 {% endblock head %}
 {% block content %}
@@ -11,4 +12,11 @@
     <img alt="onload" class="Service_image" src="{{ service_obj.image.url }}">
     <p class="Service_zag">{{ service_obj.description }}</p>
     </div>
+        <script src="{% static "js/non_main_page_header.js" %}"></script>
+    <script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+
+</script>
 {% endblock content %}

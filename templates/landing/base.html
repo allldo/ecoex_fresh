@@ -25,9 +25,9 @@
     <div class="LogoImg"></div>
     <a href="{% url 'landing:main_page' %}" class="LogoText" id="LogoText">Ecology Expert</a>
     <div class="TextHeaderHorizontal">
-        <p class="P_header"><a href="https://google.com">О нас</a></p>
+{#        <p class="P_header"><a href="https://google.com">О нас</a></p>#}
         <p class="P_header"><a href="{% url 'landing:services' %}">Услуги</a></p>
-{#        <p class="P_header"><a href="https://google.com">Разрешительные документы</a></p>#}
+        <p class="P_header"><a href="{% url 'landing:pass_docs' %}">Разрешительные документы</a></p>
         <p class="P_header"><a href="{% url 'landing:news_fan' %}">Новости</a></p>
         <p class="P_header"><a href="{% url 'landing:contacts_fan' %}">Контакты</a></p>
 
@@ -69,20 +69,18 @@
             <div class="FooterLogoImg"></div>
             <a href="{% url 'landing:main_page' %}" class="LogoText">Ecology Expert</a>
             </div>
-                <p class="DescripFooter">We’re the leading provider of comprehensive waste management services, providing services that range from collection and disposal to recycling and renewable energy generation.
+                <p class="DescripFooter">Мы являемся лидерами в своей отрасли
 
 </p>
-            <p class="LocationFooter">140 Horizon Circle, San Diego, CA
+            <p class="LocationFooter">Улица Маркова.
 
-(123) 456-7890
-
-<a class="EmailFooter">ecologyexpert@aboba.com</a></p>
+<a class="EmailFooter">ecologyexpert@kz.com</a></p>
         </div>
         <div class="MiddleSideFooter">
             <h2>Недавние новости</h2>
             <div>
               {% for new in RecentNews %}
-                <a class="new_description" href="{{ new.get_absolute_url }}">{{ new.description|truncatechars:75 }}</a>
+                <a class="new_description">{{ new.description|truncatechars:75 }}</a>
                 <p class="new_date" >{{ new.date }}</p>
               {% endfor%}
             </div>
@@ -95,37 +93,8 @@
     </div>
 </footer>
 {% block extra_js %}
-    <script src="{% static "js/change_icon.js" %}">
-
-
-    </script>
-    <script>
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
-
-// Get the header
-var header = document.getElementById("header_wrapper");
-let changing = document.getElementById("changing");
-let main_header = document.getElementById("main_header");
-// Get the offset position of the navbar
-var sticky = header.offsetTop;
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-    header.style.backgroundColor = "#353535";
-    main_header.style.paddingBottom = "0";
-    changing.style.display = "block";
-  } else {
-    header.classList.remove("sticky");
-    header.style.backgroundColor = "transparent";
-    main_header.style.paddingBottom = "15vw";
-    changing.style.display = "none";
-
-  }
-}
-</script>
+    <script src="{% static "js/change_icon.js" %}"></script>
+     
 {% endblock extra_js %}
 </body>
 </html>

@@ -10,16 +10,19 @@ qwe qwe fan
 <script src="{% static 'js/js_fan/jquery.countup.min.js' %}"></script>
 {% endblock head %}
 {% block content %}
-    <div class="BackgroundImgHeader"></div>
+        <p class="Image_text">Ecology Expert - компания созданная для замеров загрязнения окружающей среды. Нашей миссией является контроль выбросов вредных веществ в атмосферу</p>
+
+    <div class="BackgroundImgHeader">
+    </div>
 <!-- Services block -->
     <div class="ServicesBlock">
-    <h1>Our services</h1>
-    <p>What we offer</p>
+    <h1>Наши услуги</h1>
+    <p>Мы предлагаем</p>
     <div class="ServicesGrid">
     {% for service in Service %}
         <div class="ServiceItem">
-            <a href="{{ service.get_absolute_url }}"><img class="ServiceItem_img" src="{{ service.image.url }}" ></a>
-            <a href="{{ service.get_absolute_url }}" class="ServiceItem_h2">{{ service.title }}</a>
+            <a><img class="ServiceItem_img" src="{{ service.image.url }}" ></a>
+            <a class="ServiceItem_h2">{{ service.title }}</a>
             <p class="ServiceItem_p"> {{ service.description|truncatewords:125 }} </p>
         </div>
         {% endfor %}
@@ -29,18 +32,18 @@ qwe qwe fan
 
 <!-- Block info anything could be here -->
 
-<section class="section_wrapper">
-<div class="Wrapper">
-<p class="InfoBlockTitle__p">
-lorem ipsum text smh lorem ipsum text smh lorem ipsum text smh
-</p>
-<p class="InfoBlock__p">
-    lorem ipsum aboba lorem ipsum aboba lorem ipsum aboba lorem ipsum aboba
-</p>
-<div class="InfoBlock__img">
-</div>
-</div>
-</section>
+{#<section class="section_wrapper">#}
+{#<div class="Wrapper">#}
+{#<p class="InfoBlockTitle__p">#}
+{#lorem ipsum text smh lorem ipsum text smh lorem ipsum text smh#}
+{#</p>#}
+{#<p class="InfoBlock__p">#}
+{#    lorem ipsum aboba lorem ipsum aboba lorem ipsum aboba lorem ipsum aboba#}
+{#</p>#}
+{#<div class="InfoBlock__img">#}
+{#</div>#}
+{#</div>#}
+{#</section>#}
 
 <!-- End block info -->
 
@@ -60,11 +63,11 @@ lorem ipsum text smh lorem ipsum text smh lorem ipsum text smh
     <a href="{% url 'landing:faq_fan' %}"><button class="Faq_button" >К ВОПРОСАМ</button></a>
     </div>
     <section class="Number_block">
-    <div><p class="Number_number" id="first">0</p><p class="Number_label">qwefanov</p></div>
-        <div><p class="Number_number" id="second">0</p><p class="Number_label">zxcghouley</p></div>
-    <div><p class="Number_number" id="third" >0</p><p class="Number_label">fan fan</p></div>
+    <div><p class="Number_number" id="first">0</p><p class="Number_label">лет на рынке</p></div>
+        <div><p class="Number_number" id="second">0</p><p class="Number_label">проектов выполнено</p></div>
+    <div><p class="Number_number" id="third" >0</p><p class="Number_label">сотрудников</p></div>
 
-    <div><p class="Number_number" id="fourth">0</p><p class="Number_label">akjfqwe</p></div>
+    <div><p class="Number_number" id="fourth">0</p><p class="Number_label">компаний - партнеров</p></div>
 
      </section>
 
@@ -76,10 +79,10 @@ lorem ipsum text smh lorem ipsum text smh lorem ipsum text smh
      <div class="NewsWrapper">
         {% for news in Latest_News%}
             <div class="Exact__news">
-            <a href="{{ news.get_absolute_url }}"><img class="ExactNews__img" src="{{ news.image.url }}"></a>
+            <a><img class="ExactNews__img" src="{{ news.image.url }}"></a>
             <div class="ExactNews__text">
             <p class="ExactNews_P_date">{{ news.date }}</p>
-            <a href="{{ news.get_absolute_url }}"><h4>{{ news.title|truncatechars:125 }}</h4></a>
+            <a><h4>{{ news.title|truncatechars:125 }}</h4></a>
             <p class="ExactNews_P_description">{{ news.description|truncatechars:125 }}</p>
             </div>
             </div>
@@ -124,4 +127,11 @@ flag = false;
 }
 }
  </script>
+    <script src="{% static "js/main_page_header.js" %}"></script>
+    <script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+
+</script>
 {% endblock content %}

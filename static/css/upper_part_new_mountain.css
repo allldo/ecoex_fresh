@@ -1,0 +1,37 @@
+
+.Services_bg{
+    z-index: -5;
+        position: absolute;
+    background-image: url("../img/groy.png");
+    width: 100%;
+    top: 15vh;
+    height: 40vh;
+    background-size: unset;
+    background-repeat: no-repeat;
+
+}
+.Services_bg_wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.Services_bg>p, .Services_bg>h3{
+    color: white;
+    margin-left: 20vw;
+
+}
+.Services_bg>p{
+    font-size: 20px;
+    width: 35vw;
+    margin-top: 3vh;
+}
+.Services_bg>h3{
+    font-size: 65px;
+    font-weight: 500;
+    margin-top: 9vh;
+}
+
+@media (max-width: 1279px) {
+    .Services_bg{
+        background-size: contain;
+    }
+}

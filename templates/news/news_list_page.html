@@ -3,27 +3,34 @@
 {% block head %}
 <title>Новости</title>
 <link rel="stylesheet" href="{% static 'css/news_list.css' %}">
+        <link rel="stylesheet" href="{% static 'css/header_non_main.css' %}">
+
 {% endblock head %}
 {% block content %}
-<section class='news__wrapper'> 
+    <div class="Search_background">
+{#    <div class="Search_background_image"></div>#}
+        <p>НОВОСТИ</p>
     <form class="Search_block">
     <input type="search" placeholder="Поиск..." class="Input_block" />
     <button type="submit" class="Button_block">qwe</button>
         </form>
+    </div>
+<section class='news__wrapper'>
+
 {% for news in NEWS %}
 <div class="news__block">
-<a class="news__title" href="{{ news.get_absolute_url }}">{{ news.title }}</a>
+<a class="news__title">{{ news.title }}</a>
 
 <div class="news__calendar">
     <div class="newsCalendar__img"></div>
     <p>{{ news.date|date:'d.M.Y' }}</p>
 </div>
 
-<a href="{{ news.get_absolute_url }}"><img src="{{ news.image.url }}" class="news__image" /></a>
+<a><img src="{{ news.image.url }}" class="news__image" /></a>
 
 <p class="news__description">{{ news.description|truncatewords:35 }}</p>
 
-<a class="newsDescrip__button" href="{{ news.get_absolute_url }}">
+<a class="newsDescrip__button">
     <button class="news__button">Прочитать полностью</button>
 </a>
 </div>
@@ -52,4 +59,11 @@
   </ul>
 {% endif %}
 </section>
+     <script src="{% static "js/non_main_page_header.js" %}"></script>
+    <script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+
+</script>
 {% endblock content %}

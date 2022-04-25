@@ -6,7 +6,7 @@
 }
 .pass_docs_wrapper{
     width: 90%;
-    margin: 0 auto;
+    margin: 10vh auto 0 auto;
     padding-bottom: 5vh;
 }
 .pass_docs_downloadable{
@@ -37,4 +37,14 @@ h3{
     width: 24px;
     height: 24px;
     background-size: contain;
+}
+
+@media (min-width: 1280px) {
+    .pass_docs_wrapper{
+        margin-top: 20vh;
+    }
+    .pass_docs_wrapper>h1{
+        font-size: 72px;
+    }
+
 }

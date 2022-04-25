@@ -3,6 +3,8 @@
 {% block head %}
     <script type="text/javascript" src="https://vk.com/js/api/share.js?93" charset="windows-1251"></script>
 <link rel="stylesheet" href="{% static 'css/news_detail.css' %}">
+        <link rel="stylesheet" href="{% static 'css/header_non_main.css' %}">
+
 {% endblock head %}
 {% block content %}
 
@@ -18,5 +20,11 @@
 <img class="Image_news_detail" src="{{Exact_news.image.url}}" />
 <p>{{ Exact_news.description }}</p>
 </div>
+    <script src="{% static "js/non_main_page_header.js" %}"></script>
+    <script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
 
+
+</script>
 {% endblock content %}

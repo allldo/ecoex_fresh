@@ -3,10 +3,12 @@
 {% block head %}
     <title>Разрешительные документы</title>
     <link rel="stylesheet" href="{% static 'css/pass_docs.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header_non_main.css' %}">
 
 {% endblock head %}
 {% block content %}
     {% load cache %}
+    {% include 'parts/upper_new_mountain.html' %}
     {% cache 10000 docs %}
     {% load truncate_docs %}
     <div class="pass_docs_wrapper">
@@ -91,5 +93,11 @@
     }
 
     </script>
+    <script src="{% static "js/non_main_page_header.js" %}"></script>
+    <script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
 
+
+</script>
 {% endblock content %}
