@@ -5,15 +5,36 @@
     color: black !important;
 }
 .Service_img{
-    width: 405px;
-    height: 300px;
+    width: 305px;
+    height: 200px;
     align-self: center;
+    margin-top: 2vh;
 }
 .Services_wrapper{
     display: flex;
     flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 5vh;
 }
-.Services_wrapper>a, .Services_wrapper>p{
+.services_item{
+    display: flex;
+    flex-direction: column;
+}
+.Services_bg{
+    z-index: -5;
+        position: absolute;
+    background-image: url("../img/kok2.png");
+    width: 100%;
+    top: 15vh;
+    height: 40vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.services_title, .service_descrip{
         word-wrap: break-word;
     text-align: center;
     line-height: 1.5;
@@ -21,13 +42,40 @@
     margin: 1vh auto 0 auto;
     padding-bottom: 1vh;
 }
-.Services_wrapper>a{
+.services_title{
     color: black;
     font-size: 25px;
     font-weight: bolder;
+    text-align: center;
+    margin-top: 2vh;
 }
-.Services_wrapper>p{
+.service_descrip{
     color: #828282;
+}
+.Services_bg_wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.Services_bg>p, .Services_bg>h3{
+    color: white;
+    margin-left: 1vw;
+
+}
+.Services_bg>p{
+    font-size: 15px;
+    width: 95vw;
+    margin-top: 1vh;
+}
+.Services_bg>h3{
+    font-size: 35px;
+    font-weight: 500;
+}
+.Zag_service{
+    font-size: 25px;
+}
+.Text_services_wrapper{
+    width: 90%;
+    margin: 5vh auto 0 auto;
 }
 @media (max-width: 404px) {
     .Service_img {
@@ -48,12 +96,20 @@
     justify-content: flex-start;
     width: 75%;
 }
+    .Service_img{
+        width: 405px;
+        height: 300px;
+    }
 .services_item{
     text-align: center;
     display: flex;
     flex-direction: column;
     margin-left: 1vw;
     margin-right: 1vw;
+    width: 20vw;
+}
+.services_title, .service_descrip{
+    width: unset;
 }
 .services_title{
     margin-top: 1vh;

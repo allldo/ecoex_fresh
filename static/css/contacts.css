@@ -6,7 +6,7 @@
 }
 .WrapperContacts{
     width: 95%;
-    margin: 20vh auto;
+    margin: 5vh auto;
 }
 .map-responsive{
     overflow:hidden;
@@ -31,4 +31,11 @@ p{
 h4{
 font-weight: 300;
 font-size: 20px;
+}
+
+@media (min-width: 1280px) {
+    .WrapperContacts{
+    width: 95%;
+    margin: 20vh auto;
+}
 }

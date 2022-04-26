@@ -14,6 +14,7 @@
     margin: 0 auto;
 }
 input[type="search"] {
+    width: 70%;
   background: transparent;
   margin: 0;
   padding: 7px 8px;
@@ -26,7 +27,7 @@ input[type="search"] {
 input[type="search"]::placeholder {
   color: #bbb;
 }
-button[type="submit"] {
+.Button_block {
   text-indent: -999px;
   overflow: hidden;
   width: 40px;
@@ -51,7 +52,7 @@ input[type="search"]:focus {
 .news__wrapper{
     width: 95%;
     margin: 0 auto;
-    margin-top: 5vh;
+    margin-top: 15vh;
     padding-bottom: 7vh;
 }
 .news__block{
@@ -143,11 +144,36 @@ li{
 .disabled{
     display: none;
 }
-
+.Search_background{
+    position: absolute;
+    background-image: url("../img/charyyn.png");
+    width: 100%;
+    top: 23vh;
+    height: 40vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+}
+.Search_background>p{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    width: fit-content;
+    margin-top: 2vh;
+}
+.Search_block{
+    color: white;
+    width: 35%;
+    height: 6vh;
+    margin: 1vh 0 0 5vw;
+}
 @media (min-width: 1280px) {
+    input[type="search"]{
+        width: unset;
+    }
 .news__wrapper{
     width: 47%;
-    margin-top: 20vh;
+    margin-top: 25vh;
 }
 .news__block{
     align-items: flex-start;
@@ -191,7 +217,7 @@ li{
     position: absolute;
     background-image: url("../img/charyyn.png");
     width: 100%;
-    top: 15vh;
+    top: 23vh;
     height: 40vh;
     background-size: unset;
     background-repeat: no-repeat;
@@ -213,9 +239,6 @@ li{
 }
 .search{
 
-}
-.Button_block{
-    margin-left: 21vw;
 }
 
 

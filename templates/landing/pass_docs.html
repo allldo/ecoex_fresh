@@ -8,25 +8,29 @@
 {% endblock head %}
 {% block content %}
     {% load cache %}
-    {% include 'parts/upper_new_mountain.html' %}
-    {% cache 10000 docs %}
+    {% include 'parts/upper_lake.html' %}
     {% load truncate_docs %}
     <div class="pass_docs_wrapper">
     <h1>СЕРТИФИКАТЫ И РАЗРЕШИТЕЛЬНЫЕ ДОКУМЕНТЫ</h1>
-    <div>
+    <div class="inner_wrapper">
     {% for pass_doc in docs %}
+        <div class="Flex_downloads">
         <h3>{{ pass_doc.title }}</h3>
+        <div class="downloads_n_text">
         <p class="pass_docs_description">{{ pass_doc.description }}</p>
         <div class="pass_docs_downloadable" onclick="download('{{ pass_doc.file_pdf.url }}')">
         <div class="pass_docs_download_icon"></div>
         <a href="{{ pass_doc.file_pdf.url }}" download>{% truncate_docs pass_doc.file_pdf.name %}</a>
         <p>PDF</p>
         </div>
+
         {% if pass_doc.file_pdf_2 %}
         <div style="border-top: none;" class="pass_docs_downloadable" onclick="download('{{ pass_doc.file_pdf_2.url }}')">
         <div class="pass_docs_download_icon"></div>
         <a href="{{ pass_doc.file_pdf_2.url }}" download>{% truncate_docs pass_doc.file_pdf_2.name %}</a>
         <p>PDF</p>
+        </div>
+            </div>
         </div>
         {% endif %}
         {% if pass_doc.file_pdf_3 %}
@@ -60,7 +64,7 @@
         {% if pass_doc.file_pdf_7 %}
         <div style="border-top: none;" class="pass_docs_downloadable" onclick="download('{{ pass_doc.file_pdf_7.url }}')">
         <div class="pass_docs_download_icon"></div>
-        <a href="{{ pass_doc.file_pdf_7.url }}" download>{% truncate_docs pass_doc.file_pdf_72.name %}</a>
+        <a href="{{ pass_doc.file_pdf_7.url }}" download>{% truncate_docs pass_doc.file_pdf_7.name %}</a>
         <p>PDF</p>
         </div>
          {% endif %}
@@ -71,12 +75,13 @@
         <p>PDF</p>
         </div>
         {% endif %}
-
+</div>
+        </div>
     {% endfor %}
     </div>
     </div>
 
-{% endcache %}
+
     <script>
     function downloadURI(uri, name)
 {

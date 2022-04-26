@@ -46,5 +46,34 @@ h3{
     .pass_docs_wrapper>h1{
         font-size: 72px;
     }
-
+    .Flex_downloads{
+        display: flex;
+        flex-direction: row;
+    }
+    .Flex_downloads>h3{
+        font-size: 40px;
+        width: 15vw;
+    }
+    .downloads_n_text{
+        width: 55vw;
+        margin-left: 10vw;
+        display: flex;
+        flex-direction: column;
+    }
+    .pass_docs_downloadable{
+        padding: 10px;
+        justify-content: space-evenly;
+    }
+    .pass_docs_downloadable>a {
+        /*margin-left: 2vw;*/
+    }
+    .pass_docs_downloadable>p{
+        margin-left: 43vw;
+    }
+    .pass_docs_wrapper{
+        padding-bottom: 0;
+    }
+    .Flex_downloads{
+        padding-bottom: 5vh;
+    }
 }
