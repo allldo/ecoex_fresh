@@ -16,7 +16,12 @@
 <h1 class="Zag_service">Our vision to provide exceptional service and waste management solutions for businesses has been realized thanks to the efforts of our committed and experienced people.</h1>
 <p class="Descript_services">In 2007 GoGreen identified a significant waste management industry market need. Businesses were looking for a partner large enough and experienced enough to manage high volume and time-critical work with ease, and one who would remain responsive, reliable and truly customer-focused.</p>
 </div>
+    {% for group in Services_group %}
+    <p>{{ group.title }}</p>
+
+{% endfor %}
 <div class="Services_wrapper">
+
 {% for service in Services %}
     <div class="services_item">
     <img class="Service_img" src="{{ service.image.url }}" />

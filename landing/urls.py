@@ -10,6 +10,7 @@ urlpatterns = [
    path('service/<int:service_id>', views.service_detail, name='service_detail'),
    path('services', views.services, name='services'),
    path('pass_docs', views.pass_docs, name='pass_docs'),
+   path('about_us', views.about_us, name='about_us'),
 # ajax
    path('form_valid', views.form_valid, name='form_valid')
 ]

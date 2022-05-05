@@ -1,0 +1,18 @@
+{% extends 'landing/base.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/contacts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header_non_main.css' %}">
+{% endblock head %}
+{% block content %}
+    {% include 'parts/upper_lake.html' %}
+    {{ about_us.text|safe }}
+     </section>
+        <script src="{% static "js/non_main_page_header.js" %}"></script>
+    <script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+
+</script>
+{% endblock content %}

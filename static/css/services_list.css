@@ -93,8 +93,8 @@
     flex-wrap: wrap;
     margin: 0 auto;
     padding-bottom: 7vh;
-    justify-content: flex-start;
-    width: 75%;
+    justify-content: space-evenly;
+    width: 85%;
 }
     .Service_img{
         width: 405px;

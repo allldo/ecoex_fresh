@@ -25,7 +25,7 @@
     <div class="LogoImg"></div>
     <a href="{% url 'landing:main_page' %}" class="LogoText" id="LogoText">Ecology Expert</a>
     <div class="TextHeaderHorizontal">
-{#        <p class="P_header"><a href="https://google.com">О нас</a></p>#}
+        <p class="P_header"><a href="{% url 'landing:about_us' %}">О нас</a></p>
         <p class="P_header"><a href="{% url 'landing:services' %}">Услуги</a></p>
         <p class="P_header"><a href="{% url 'landing:pass_docs' %}">Разрешительные документы</a></p>
         <p class="P_header"><a href="{% url 'landing:news_fan' %}">Новости</a></p>
@@ -80,7 +80,7 @@
             <h2>Недавние новости</h2>
             <div>
               {% for new in RecentNews %}
-                <a class="new_description">{{ new.description|truncatechars:75 }}</a>
+                <a class="new_description" href="{{ new.get_absolute_url }}">{{ new.description|truncatechars:75 }}</a>
                 <p class="new_date" >{{ new.date }}</p>
               {% endfor%}
             </div>

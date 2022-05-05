@@ -10,8 +10,8 @@
     <div class="Search_background">
 {#    <div class="Search_background_image"></div>#}
         <p>НОВОСТИ</p>
-    <form class="Search_block">
-    <input type="search" placeholder="Поиск..." class="Input_block" />
+    <form class="Search_block" method="get">
+    <input type="search" name="q" placeholder="Поиск..." class="Input_block" />
     <button type="submit" class="Button_block">qwe</button>
         </form>
     </div>
@@ -19,18 +19,18 @@
 
 {% for news in NEWS %}
 <div class="news__block">
-<a class="news__title">{{ news.title }}</a>
+<a class="news__title" href="{{ news.get_absolute_url }}">{{ news.title }}</a>
 
 <div class="news__calendar">
     <div class="newsCalendar__img"></div>
     <p>{{ news.date|date:'d.M.Y' }}</p>
 </div>
 
-<a><img src="{{ news.image.url }}" class="news__image" /></a>
+<a href="{{ news.get_absolute_url }}"><img src="{{ news.image.url }}" class="news__image" /></a>
 
 <p class="news__description">{{ news.description|truncatewords:35 }}</p>
 
-<a class="newsDescrip__button">
+<a class="newsDescrip__button" href="{{ news.get_absolute_url }}">
     <button class="news__button">Прочитать полностью</button>
 </a>
 </div>

@@ -2,9 +2,9 @@ from django.core.mail import send_mail
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
+from django.db.models import Q
 from ecology_full_new import settings
-from landing.models import FAQ, News, Service, PassDocs
+from landing.models import FAQ, News, Service, PassDocs, ServiceGroup, AboutUs
 
 # Create your views here.
 
@@ -41,6 +41,13 @@ def news_list_page(request):
     except EmptyPage:
         news = paginator.page(paginator.num_pages)
     context['NEWS'] = news
+
+    if 'q' in request.GET:
+        query = request.GET.get('q')
+        News.objects.filter(Q(name__icontains=query))
+        context
+        return render(request, 'news/news_list_page.html', context)
+
     return render(request, 'news/news_list_page.html', context)
 
 
@@ -65,8 +72,7 @@ def pass_docs(request):
 
 
 def services(request):
-    context = {}
-    context['Services'] = Service.objects.all()
+    context = {'Services': Service.objects.all(), 'Services_group': ServiceGroup.objects.all()}
     return render(request, "service/services_list.html", context)
 
 
@@ -83,3 +89,8 @@ def form_valid(request):
     return JsonResponse({
         'fucking cumming': 'fucking cumming'
     })
+
+
+def about_us(request):
+    context = {'about_us': AboutUs.objects.first()}
+    return render(request, 'landing/aboutUs.html', context)

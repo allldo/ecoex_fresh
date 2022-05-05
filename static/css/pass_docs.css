@@ -62,13 +62,15 @@ h3{
     }
     .pass_docs_downloadable{
         padding: 10px;
-        justify-content: space-evenly;
+        justify-content: unset;
+        /*justify-content: space-evenly;*/
     }
     .pass_docs_downloadable>a {
         /*margin-left: 2vw;*/
     }
     .pass_docs_downloadable>p{
-        margin-left: 43vw;
+        position: absolute;
+        right: 15vw;
     }
     .pass_docs_wrapper{
         padding-bottom: 0;

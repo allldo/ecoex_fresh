@@ -30,8 +30,7 @@
         <a href="{{ pass_doc.file_pdf_2.url }}" download>{% truncate_docs pass_doc.file_pdf_2.name %}</a>
         <p>PDF</p>
         </div>
-            </div>
-        </div>
+
         {% endif %}
         {% if pass_doc.file_pdf_3 %}
         <div style="border-top: none;" class="pass_docs_downloadable" onclick="download('{{ pass_doc.file_pdf_3.url }}')">
@@ -39,6 +38,7 @@
         <a href="{{ pass_doc.file_pdf_3.url }}" download>{% truncate_docs pass_doc.file_pdf_3.name %}</a>
         <p>PDF</p>
         </div>
+
          {% endif %}
         {% if pass_doc.file_pdf_4 %}
         <div style="border-top: none;" class="pass_docs_downloadable" onclick="download('{{ pass_doc.file_pdf_4.url }}')">
@@ -75,12 +75,11 @@
         <p>PDF</p>
         </div>
         {% endif %}
+           </div>
+</div>
+    {% endfor %}
 </div>
         </div>
-    {% endfor %}
-    </div>
-    </div>
-
 
     <script>
     function downloadURI(uri, name)

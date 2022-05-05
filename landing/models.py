@@ -1,16 +1,24 @@
 from django.db import models
 from django.urls import reverse
-
+from tinymce.models import HTMLField
 
 class Service(models.Model):
     title = models.CharField(max_length=45)
     image = models.ImageField(upload_to='services/')
     description = models.CharField(max_length=650)
+    service_group = models.ForeignKey('ServiceGroup', on_delete=models.CASCADE, null=True)
 
     def get_absolute_url(self):
         return reverse('landing:service_detail', kwargs={'service_id': self.id})
 
     def __str__(self) -> str:
+        return self.title
+
+
+class ServiceGroup(models.Model):
+    title = models.CharField(max_length=155)
+
+    def __str__(self):
         return self.title
 
 
@@ -27,7 +35,7 @@ class News(models.Model):
     date = models.DateField(auto_now_add=True)
     slug = models.SlugField(max_length=75, unique=True, db_index=True, verbose_name="URL")
     image = models.ImageField(upload_to="news/", null=True)
-    description = models.TextField()
+    description = HTMLField()
 
     def save(self, *args, **kwargs):
         self.slug = self.slug
@@ -54,3 +62,7 @@ class PassDocs(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class AboutUs(models.Model):
+    text = HTMLField()
