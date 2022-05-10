@@ -1,0 +1,17 @@
+*{
+    font-family: 'Raleway', sans-serif;
+}
+#LogoText{
+    color: black !important;
+}
+.about_us_body{
+    width: 90%;
+    margin: 10vh auto 0 auto;
+}
+
+@media (min-width: 1280px) {
+    .about_us_body{
+        margin-top: 25vh;
+        padding-bottom: 10vh;
+    }
+}

@@ -19,23 +19,72 @@
 .map-responsive iframe{
     left:0;
     top:0;
-    height:100%;
+    height:250px;
     width:100%;
     position:absolute;
 }
-p{
+
+.h_four{
+font-weight: 500;
     font-size: 20px;
-    color: gray;
-    /*padding-bottom: 5vh;*/
+    margin-top: 2vh;
 }
-h4{
-font-weight: 300;
-font-size: 20px;
+.p_contacts{
+    color: #4f4f4f;
 }
 
+.itcss{
+    max-width: unset !important;
+}
+.itcss__wrapper{
+    background-color: unset !important;
+}
+.h3_contacts{
+
+}
 @media (min-width: 1280px) {
     .WrapperContacts{
     width: 95%;
     margin: 20vh auto;
+        display: flex;
+        flex-direction: row;
+}
+    .itcss__item{
+        display: flex;
+        flex-direction: row;
+    }
+    .h3_contacts{D
+        font-size: 72px;
+        position: absolute;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+text-align: center;
+    }
+    .map-responsive{
+    padding-bottom:unset;
+    position:relative;
+    height:unset;
+    margin-top: 13vh;
+        margin-left: 15vw;
+}
+    .map-responsive iframe{
+    left:0;
+    top:0;
+    height:450px;
+    width:960px;
+    position:absolute;
+}
+    .h_four{
+    font-size: 36px;
+        margin-top: 10vh;
+    }
+.p_contacts{
+font-size: 26px;
+
+}
+.Address_contacts{
+    margin: 3vh 0 0 15vw;
 }
 }

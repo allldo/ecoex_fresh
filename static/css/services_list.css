@@ -77,6 +77,10 @@
     width: 90%;
     margin: 5vh auto 0 auto;
 }
+    .GroupText{
+        text-align: center;
+        margin-top: 5vh;
+    }
 @media (max-width: 404px) {
     .Service_img {
         width: 100%;
@@ -86,6 +90,10 @@
 }
 
 @media (min-width: 1280px) {
+    .GroupText{
+        text-align: center;
+        font-size: 65px;
+    }
 .Services_wrapper{
     display: flex;
     flex-basis: 35%;

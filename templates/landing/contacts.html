@@ -4,22 +4,91 @@
     <title>Контакты</title>
     <link rel="stylesheet" href="{% static 'css/contacts.css' %}">
     <link rel="stylesheet" href="{% static 'css/header_non_main.css' %}">
-
+    <link rel="stylesheet" href="{% static 'js/ui-components-master/simple-adaptive-slider/css/simple-adaptive-slider.css' %}">
+    <script defer src="{% static 'js/ui-components-master/simple-adaptive-slider/js/simple-adaptive-slider.js' %}"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // инициализация слайдера
+      var slider = new ItcSimpleSlider('.itcss', {
+        loop: false,
+        autoplay: false,
+        swipe: true
+      });
+    });
+  </script>
 {% endblock head %}
 {% block content %}
     {% include 'parts/upper_kok.html' %}
     <section class="WrapperContacts">
-    <div>
-    <h4>Адрес</h4>
-    <p>Улица Маркова</p>
-    <h4>Телефоны</h4>
-    <p>+777777777</p>
-    <h4>E-mail</h4>
-    <a>ecoex@gmail.com</a>
+
+
+<div class="itcss">
+    <div class="itcss__wrapper">
+      <div class="itcss__items">
+        <div class="itcss__item">
+          <div class="Address_contacts">
+              <h3 class="h3_contacts">АЛМАТЫ</h3>
+    <h4 class="h_four">Адрес</h4>
+    <p class="p_contacts">Улица Маркова</p>
+    <h4 class="h_four">Телефоны</h4>
+    <p class="p_contacts">+777777777</p>
+    <h4 class="h_four">E-mail</h4>
+    <a href="mailto: ecoex@gmail.com"class="p_contacts">ecoex@gmail.com</a>
     </div>
-    <div class="map-responsive">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3771.027721542219!2d76.85172085811745!3d43.21242928870803!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2skz!4v1650909945092!5m2!1sru!2skz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-responsive">
+   <div style="position:relative;overflow:hidden;"><a href="https://yandex.kz/maps/org/86279408393/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Ecology Expert</a><a href="https://yandex.kz/maps/162/almaty/category/environmental_organization/184106288/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Экологическая организация в Алматы</a><iframe src="https://yandex.kz/map-widget/v1/-/CCUFZ-qT-A" width="960" height="450" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
     </div>
+        </div>
+        <div class="itcss__item">
+          <div class="Address_contacts">
+              <h3 class="h3_contacts">ПАВЛОДАР</h3>
+    <h4 class="h_four">Адрес</h4>
+    <p class="p_contacts">Улица Маркова</p>
+    <h4 class="h_four">Телефоны</h4>
+    <p class="p_contacts">+777777777</p>
+    <h4 class="h_four">E-mail</h4>
+    <a href="mailto: ecoex@gmail.com"class="p_contacts">ecoex@gmail.com</a>
+    </div>
+        <div class="map-responsive">
+   <div style="position:relative;overflow:hidden;"><a href="https://yandex.kz/maps/org/86279408393/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Ecology Expert</a><a href="https://yandex.kz/maps/162/almaty/category/environmental_organization/184106288/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Экологическая организация в Алматы</a><iframe src="https://yandex.kz/map-widget/v1/-/CCUFZ-qT-A" width="960" height="450" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+    </div>
+        </div>
+        <div class="itcss__item">
+          <div class="Address_contacts">
+              <h3 class="h3_contacts">ТАЛДЫКОРГАН</h3>
+    <h4 class="h_four">Адрес</h4>
+    <p class="p_contacts">Улица Маркова</p>
+    <h4 class="h_four">Телефоны</h4>
+    <p class="p_contacts">+777777777</p>
+    <h4 class="h_four">E-mail</h4>
+    <a href="mailto: ecoex@gmail.com"class="p_contacts">ecoex@gmail.com</a>
+    </div>
+        <div class="map-responsive">
+   <div style="position:relative;overflow:hidden;"><a href="https://yandex.kz/maps/org/86279408393/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Ecology Expert</a><a href="https://yandex.kz/maps/162/almaty/category/environmental_organization/184106288/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Экологическая организация в Алматы</a><iframe src="https://yandex.kz/map-widget/v1/-/CCUFZ-qT-A" width="960" height="450" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+    </div>
+        </div>
+        <div class="itcss__item">
+          <div class="Address_contacts">
+              <h3 class="h3_contacts">ОШЫВА</h3>
+    <h4 class="h_four">Адрес</h4>
+    <p class="p_contacts">Улица Маркова</p>
+    <h4 class="h_four">Телефоны</h4>
+    <p class="p_contacts">+777777777</p>
+    <h4 class="h_four">E-mail</h4>
+    <a href="mailto: ecoex@gmail.com"class="p_contacts">ecoex@gmail.com</a>
+    </div>
+        <div class="map-responsive">
+   <div style="position:relative;overflow:hidden;"><a href="https://yandex.kz/maps/org/86279408393/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Ecology Expert</a><a href="https://yandex.kz/maps/162/almaty/category/environmental_organization/184106288/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Экологическая организация в Алматы</a><iframe src="https://yandex.kz/map-widget/v1/-/CCUFZ-qT-A" width="960" height="450" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+    </div>
+        </div>
+      </div>
+    </div>
+    <a class="itcss__control itcss__control_prev" href="#" role="button" data-slide="prev"></a>
+    <a class="itcss__control itcss__control_next" href="#" role="button" data-slide="next"></a>
+  </div>
+
+
+
     </section>
         <script src="{% static "js/non_main_page_header.js" %}"></script>
     <script>
