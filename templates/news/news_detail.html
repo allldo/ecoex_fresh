@@ -7,7 +7,8 @@
 
 {% endblock head %}
 {% block content %}
-
+{% include 'parts/upper_lake.html' %}
+    <div class="BothSidesWrapper">
 <div class="Exact_news__wrapper">
 <h1>{{ Exact_news.title }}</h1>
 <div class="FlexCalendarDate"><div class="Exact_news__calendar"></div> <p>{{ Exact_news.date }}</p></div>
@@ -20,6 +21,16 @@
 <img class="Image_news_detail" src="{{Exact_news.image.url}}" />
 <p>{{ Exact_news.description }}</p>
 </div>
+<div class="Sidebar_news">
+<p class="another_recent">Другие свежие новости</p>
+    {% for news in recent %}
+        <div class="recent_news__item">
+        <a href="{{ news.get_absolute_url }}"><img class="recent_news__image" src="{{ news.image.url }}"></a>
+       <a href="{{ news.get_absolute_url }}"><p class="recent_news__p">{{ news.title|truncatechars:25 }}</p></a>
+        </div>
+    {% endfor %}
+    </div>
+    </div>
     <script src="{% static "js/non_main_page_header.js" %}"></script>
     <script>
 // When the user scrolls the page, execute myFunction

@@ -122,6 +122,42 @@ padding-bottom: 5vh;
 }
 /* FAQ BLOCK ENDS */
 
+
+/* TESTIMONIALS START*/
+.Testimonials{
+    padding-bottom: 5vh;
+}
+.Testimonials>p{
+    margin-top: 5vh;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 700;
+    font-style: italic;
+}
+.Testimonial_item{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5vh;
+    justify-content: space-between;
+}
+.quote_img{
+    background-image: url("../img/quote.png");
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    margin-left: 2vw;
+}
+.Testimonials_body{
+    font-size: 18px;
+    color: #828282;
+    width: 80vw;
+}
+.NameOfTestimonials{
+    font-size: 20px;
+    font-weight: 700;
+}
+/* TESTIMONIALS END */
+
 /* Number part */
 
 .Number_block{
@@ -241,6 +277,27 @@ padding-bottom: 5vh;
 }
 
 @media (min-width: 1280px) {
+    .Testimonials>p{
+        font-size: 55px;
+    }
+.Testimonials_items_wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 65vw;
+    margin: 0 auto;
+}
+.Testimonials_body{
+    width: 30vw;
+    margin-left: 2vw;
+}
+.quote_img {
+width: 48px;
+    height: 48px;
+}
+
+
+
+
     .Image_text{
         display: block;
         font-size: 72px;

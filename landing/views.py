@@ -20,6 +20,7 @@ def main_page(request):
 def news_detail_page(request, news_slug):
     context={}
     context['Exact_news'] = get_object_or_404(News, slug=news_slug)
+    context['recent'] = News.objects.all()[:3]
     return render(request, 'news/news_detail.html', context)
 
 
