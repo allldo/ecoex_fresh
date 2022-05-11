@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-45+ewuh2q%1z_!xk&0d65b7zl^gpol7ao$*d#wfd9$)pms3vk4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tinymce',
-
+    'django.contrib.sitemaps',
     #apps
     'ecology_full_new',
     'projects',

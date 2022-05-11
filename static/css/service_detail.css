@@ -4,7 +4,7 @@
 }
 .Wrapper_services{
     width: 90%;
-    margin: 0 auto;
+    margin: 2vh auto 0 auto;
     padding-bottom: 10vh;
     display: flex;
     flex-direction: column;
@@ -21,11 +21,39 @@
 }
 .Service_zag{
     text-align: center;
+    margin-top: 15vh;
+}
+.Service_descrip{
+
 }
 @media (max-width: 404px) {
     .Service_image {
         width: 100%;
         max-height: 300px;
+        background-size: cover;
+    }
+
+}
+@media (min-width: 1280px) {
+      .Wrapper_services{
+        margin-top: 5vh;
+        flex-direction: row;
+    }
+    .Service_image{
+        align-self: flex-start;
+    }
+    .Service_zag{
+    margin-top: 25vh;
+        font-size: 55px;
+}
+    .Service_descrip{
+        margin-left: 10vw;
+        font-size: 20px;
+        line-height: 1.3;
+}
+       .Service_image {
+        width: 550px;
+        height: 400px;
         background-size: cover;
     }
 }

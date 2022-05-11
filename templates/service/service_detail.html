@@ -7,10 +7,11 @@
 
 {% endblock head %}
 {% block content %}
-    <div class="Wrapper_services">
+    {% include 'parts/charyn.html' %}
     <h1 class="Service_zag">{{ service_obj.title }}</h1>
+    <div class="Wrapper_services">
     <img alt="onload" class="Service_image" src="{{ service_obj.image.url }}">
-    <p class="Service_zag">{{ service_obj.description }}</p>
+    <p class="Service_descrip">{{ service_obj.description }}</p>
     </div>
         <script src="{% static "js/non_main_page_header.js" %}"></script>
     <script>

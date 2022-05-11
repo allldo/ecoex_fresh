@@ -3,6 +3,10 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 from . import  settings
+handler404 = 'landing.views.handler404'
+handler500 = 'landing.views.handler500'
+handler403 = 'landing.views.handler403'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(("landing.urls", 'landing'), namespace='landing')),

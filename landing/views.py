@@ -42,13 +42,26 @@ def news_list_page(request):
         news = paginator.page(paginator.num_pages)
     context['NEWS'] = news
 
+    return render(request, 'news/news_list_page.html', context)
+
+
+def news_search(request):
+    context = {}
+    page = request.GET.get('page', 1)
+
     if 'q' in request.GET:
         query = request.GET.get('q')
-        News.objects.filter(Q(name__icontains=query))
-        context
-        return render(request, 'news/news_list_page.html', context)
-
-    return render(request, 'news/news_list_page.html', context)
+        print(query)
+        paginator = Paginator(News.objects.filter(Q(title__icontains=query)).order_by('-date'), 1)
+        print(News.objects.filter(Q(title__icontains=query)))
+        try:
+            news = paginator.page(page)
+        except PageNotAnInteger:
+            news = paginator.page(1)
+        except EmptyPage:
+            news = paginator.page(paginator.num_pages)
+        context['NEWS'] = news
+        return render(request, 'news/news_search.html', context)
 
 
 def service_detail(request, service_id):
@@ -94,3 +107,21 @@ def form_valid(request):
 def about_us(request):
     context = {'about_us': AboutUs.objects.first()}
     return render(request, 'landing/aboutUs.html', context)
+
+
+# Error pages
+
+
+def handler404(request, exception, template_name="error/404.html"):
+    response = render(request, template_name)
+    response.status_code = 404
+    return response
+
+
+def handler500(request, *args, **argv):
+    return render(request, 'error/500.html', status=500)
+
+
+def handler403(request, exception):
+    response = render(request, 'error/403.html', status=403)
+    return response
