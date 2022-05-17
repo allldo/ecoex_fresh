@@ -3,9 +3,9 @@ from django.urls import reverse
 from tinymce.models import HTMLField
 
 class Service(models.Model):
-    title = models.CharField(max_length=45)
+    title = models.CharField(max_length=255)
     image = models.ImageField(upload_to='services/')
-    description = models.CharField(max_length=650)
+    description = HTMLField()
     service_group = models.ForeignKey('ServiceGroup', on_delete=models.CASCADE, null=True)
 
     def get_absolute_url(self):

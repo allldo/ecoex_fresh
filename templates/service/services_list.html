@@ -16,18 +16,20 @@
 <h1 class="Zag_service">Our vision to provide exceptional service and waste management solutions for businesses has been realized thanks to the efforts of our committed and experienced people.</h1>
 <p class="Descript_services">In 2007 GoGreen identified a significant waste management industry market need. Businesses were looking for a partner large enough and experienced enough to manage high volume and time-critical work with ease, and one who would remain responsive, reliable and truly customer-focused.</p>
 </div>
+    <div>
     {% for group in Services_group %}
     <h2 class="GroupText">{{ group.title }}</h2>
         <div class="Services_wrapper">
     {% for service in group.service_set.get_queryset  %}
     <div class="services_item">
     <a href="{{ service.get_absolute_url }}"><img class="Service_img" src="{{ service.image.url }}" /></a>
-    <a class="services_title" href="{{ service.get_absolute_url }}">{{ service.title }}</a>
-   <p class="service_descrip"> {{ service.description|truncatewords:35 }}</p>
+    <a class="services_title" href="{{ service.get_absolute_url }}">{{ service.title|truncatechars:40 }}</a>
+   <p class="service_descrip"> {{ service.description|striptags|truncatechars:85 }}</p>
 </div>
     {% endfor %}
         </div>
 {% endfor %}
+    </div>
 {#<div class="Services_wrapper">#}
 {##}
 {#{% for service in Services %}#}

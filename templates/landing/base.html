@@ -80,7 +80,7 @@
             <h2>Недавние новости</h2>
             <div>
               {% for new in RecentNews %}
-                <a class="new_description" href="{{ new.get_absolute_url }}">{{ new.description|truncatechars:75 }}</a>
+                <a class="new_description" href="{{ new.get_absolute_url }}">{{ new.title|truncatechars:75|safe }}</a>
                 <p class="new_date" >{{ new.date }}</p>
               {% endfor%}
             </div>

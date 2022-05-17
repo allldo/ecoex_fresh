@@ -216,7 +216,7 @@ padding-bottom: 5vh;
     color: grey;
     margin-top: 2vh;
 }
-.ExactNews_P_description{
+.ExactNews__text>p{
     margin-top: 3vh;
     padding-bottom: 3vh;
     color: #828282;
@@ -325,6 +325,7 @@ width: 48px;
     }
     .ServiceItem_h2{
         font-size: 22px;
+        width: 455px;
     }
     .ServiceItem{
 
@@ -332,11 +333,15 @@ width: 48px;
     .Faq_wrapper{
         display: flex;
         flex-direction: row;
-        width: 60%;
+        width: 75%;
         margin: 0 auto;
+        padding-bottom: 10vh;
+    }
+    .Faq_block{
+        padding-bottom: 10vh;
     }
     .Faq_item{
-        width: 20vw;
+        width: 22vw;
         padding: 1vw;
         margin: 1vw;
     }
@@ -366,9 +371,8 @@ width: 48px;
         width: 455px;
         height: 280px;
     }
-    .ExactNews_P_date, .ExactNews__text>a>h4, .ExactNews_P_description{
+    .ExactNews_P_date, .ExactNews__text>a>h4, .ExactNews__text>p{
         font-size: 20px;
         width: 25vw;
     }
-
 }

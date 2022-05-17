@@ -5,7 +5,7 @@
         width: 100%;
         top: 15vh;
         height: 40vh;
-        background-size: contain;
+         background-size: cover;
         background-repeat: no-repeat;
     }
 
@@ -42,7 +42,7 @@
         width: 100%;
         top: 15vh;
         height: 40vh;
-        background-size: unset;
+    background-size: cover;
         background-repeat: no-repeat;
 
     }

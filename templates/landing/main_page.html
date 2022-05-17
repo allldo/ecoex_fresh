@@ -21,9 +21,9 @@ qwe qwe fan
     <div class="ServicesGrid">
     {% for service in Service %}
         <div class="ServiceItem">
-            <a><img class="ServiceItem_img" src="{{ service.image.url }}" ></a>
-            <a class="ServiceItem_h2">{{ service.title }}</a>
-            <p class="ServiceItem_p"> {{ service.description|truncatewords:125 }} </p>
+            <a href="{{ service.get_absolute_url }}"><img class="ServiceItem_img" src="{{ service.image.url }}" ></a>
+            <a href="{{ service.get_absolute_url }}" class="ServiceItem_h2">{{ service.title }}</a>
+            <p class="ServiceItem_p"> {{ service.description|striptags|truncatechars:75  }} </p>
         </div>
         {% endfor %}
     </div>
@@ -56,7 +56,7 @@ qwe qwe fan
     {% for faq in FAQ %}
     <div class="Faq_item">
     <h1 class="Faq_title">{{ faq.question }}</h1>
-    <p class="Faq_answer"> {{ faq.answer }} </p>
+    <p class="Faq_answer"> {{ faq.answer|truncatechars:30 }} </p>
     </div>
     {% endfor %}
     </div>
@@ -114,7 +114,7 @@ qwe qwe fan
             <div class="ExactNews__text">
             <p class="ExactNews_P_date">{{ news.date }}</p>
             <a href="{{ news.get_absolute_url }}"><h4>{{ news.title|truncatechars:125 }}</h4></a>
-            <p class="ExactNews_P_description">{{ news.description|truncatechars:125 }}</p>
+            <p class="ExactNews_P_description">{{ news.description|striptags|truncatechars:125 }}</p>
             </div>
             </div>
         {% endfor %}
@@ -148,10 +148,10 @@ var body = document.querySelector("body");
 var g = top - heightScreen;
 if (g <=0){
 if (flag === true){
-animateValue("first", 0, 27, 1000);
-animateValue("second", 0, 320, 1000);
-animateValue("third", 0, 76, 1000);
-animateValue("fourth", 0, 18, 1000);
+animateValue("first", 0, 29, 2000);
+animateValue("second", 0, 500, 1);
+animateValue("third", 0, 25, 2000);
+animateValue("fourth", 0, 100, 2000);
 
 flag = false;
 }
@@ -162,7 +162,9 @@ flag = false;
     <script>
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
-
+setTimeout()
+let number = document.getElementById('second')
+setTimeout(() => { console.log("мир"); }, 3000);
 
 </script>
 {% endblock content %}

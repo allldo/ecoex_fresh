@@ -219,7 +219,7 @@ li{
     width: 100%;
     top: 23vh;
     height: 40vh;
-    background-size: unset;
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: row;
