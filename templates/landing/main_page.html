@@ -6,7 +6,7 @@ qwe qwe fan
 {% block head %}
      <link rel="stylesheet" href="{% static 'css/main_page.css' %}">
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
+<title>Ecology Expert</title>
 <script src="{% static 'js/js_fan/jquery.countup.min.js' %}"></script>
 {% endblock head %}
 {% block content %}
@@ -49,6 +49,7 @@ qwe qwe fan
 
 
 <!-- FAQ block  -->
+    {% cache 86400 faq %}
     <div class="Faq_block">
     <p style="color: #e7ceb1; margin-top: 2vh;">Часто задаваемые вопросы</p>
     <h1>ЧЗВ</h1>
@@ -63,8 +64,9 @@ qwe qwe fan
     <a href="{% url 'landing:faq_fan' %}"><button class="Faq_button" >К ВОПРОСАМ</button></a>
     </div>
     <!-- FAQ block ends -->
-
+{% endcache %}
   <!-- Testimonials block -->
+    {% cache 39400 testimonials %}
     <div class="Testimonials">
     <p>ОТЗЫВЫ</p>
         <div class="Testimonials_items_wrapper">
@@ -91,7 +93,7 @@ qwe qwe fan
     </div>
         </div>
     </div>
-
+{% endcache %}
   <!-- Testimonials block ends-->
     <!-- numbers block -->
     <section class="Number_block">

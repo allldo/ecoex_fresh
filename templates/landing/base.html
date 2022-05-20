@@ -21,7 +21,7 @@
 <body>
 <section class="HeaderWrapper" id="header_wrapper" style="background-clip: content-box">
 <header id="main_header">
-{#    {% cache 2500 head %}#}
+    {% cache 2500 head %}
     <div class="LogoImg"></div>
     <a href="{% url 'landing:main_page' %}" class="LogoText" id="LogoText">Ecology Expert</a>
     <div class="TextHeaderHorizontal">
@@ -36,12 +36,12 @@
         {% include 'parts/mobile_header.html' %}
 
 
-{#{% endcache %}#}
+{% endcache %}
 </header>
 </section>
 <section class="HeaderWrapper" id="changing" style="visibility: hidden; display: none">
 <header>
-{#    {% cache 2500 head %}#}
+    {% cache 2500 head %}
     <div class="LogoImg"></div>
     <a href="{% url 'landing:main_page' %}" class="LogoText" id="LogoText">Ecology Expert</a>
     <div class="TextHeaderHorizontal">
@@ -56,13 +56,13 @@
         {% include 'parts/mobile_header.html' %}
 
 
-{#{% endcache %}#}
+{% endcache %}
 </header>
 </section>
 {% block content %}
 {% endblock content %}
 <footer>
-{#{% cache 3600 footer %}#}
+{% cache 3600 footer %}
     <div class="Footer">
         <div class="LeftSideFooter">
             <div class="FooterLogo">
@@ -85,7 +85,7 @@
               {% endfor%}
             </div>
         </div>
-{#{% endcache %}#}
+{% endcache %}
     {% include 'parts/form_footer.html' %}
     </div>
     <div class="UnderFooter">
