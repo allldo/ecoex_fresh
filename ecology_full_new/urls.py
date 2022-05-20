@@ -10,12 +10,10 @@ if settings.DEBUG:
     urlpatterns = [
         path('admin/', admin.site.urls),
         path('', include(("landing.urls", 'landing'), namespace='landing')),
-        path('tinymce/', include('tinymce.urls')),
     ] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
     urlpatterns +=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns = [
         path('admin/', admin.site.urls),
         path('', include(("landing.urls", 'landing'), namespace='landing')),
-        path('tinymce/', include('tinymce.urls')),
     ]
