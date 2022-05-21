@@ -50,6 +50,7 @@ font-weight: 500;
         flex-direction: row;
 }
     .itcss__item{
+        flex: 0 0 90% !important;
         display: flex;
         flex-direction: row;
     }

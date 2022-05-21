@@ -8,10 +8,17 @@
     width: 90%;
     margin: 10vh auto 0 auto;
 }
-
+.privacy{
+    width: 80%;
+    margin: 15vh auto 0 auto;
+}
 @media (min-width: 1280px) {
     .about_us_body{
         margin-top: 25vh;
         padding-bottom: 10vh;
+        font-size: 26px;
+    }
+    .privacy{
+        margin-top: 20vh;
     }
 }

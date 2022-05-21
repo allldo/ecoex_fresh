@@ -110,6 +110,10 @@ def about_us(request):
     return render(request, 'landing/aboutUs.html', context)
 
 
+def privacy(request):
+    return render(request, 'landing/privacy.html')
+
+
 # Error pages
 
 

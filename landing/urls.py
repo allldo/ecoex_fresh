@@ -22,7 +22,8 @@ urlpatterns = [
    path('about_us', views.about_us, name='about_us'),
    path('news_search', views.news_search, name='news_search'),
    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+   path('privacy', views.privacy, name='privacy'),
 
-   # ajax
+    # ajax
    path('form_valid', views.form_valid, name='form_valid')
 ]

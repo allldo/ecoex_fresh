@@ -5,13 +5,20 @@
 <head>
 {% block head %}
 {% endblock head %}
-{% cache 25000 header %}
+{% cache 2500 header %}
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{% static 'css/base.css' %}">
 <link rel="stylesheet" href="{% static 'css/mobile_header.css' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicons/apple-touch-icon.png' %}">
+<link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicons/favicon-32x32.png' %}">
+<link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicons/favicon-16x16.png' %}">
+<link rel="manifest" href="{% static 'img/favicons/site.webmanifest' %}">
+<link rel="mask-icon" href="{% static 'img/favicons/safari-pinned-tab.svg' %}" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
 {% endcache %}
 {% comment %} <link rel="stylesheet" href="{% static 'js/slideout-1.0.1/dist/slideout.js' %}"> {% endcomment %}
 
@@ -89,7 +96,7 @@
     {% include 'parts/form_footer.html' %}
     </div>
     <div class="UnderFooter">
-        <h1>2021 ECOEX <a href="https://google.com">privacy</a></h1>
+        <h1>© 2022 Ecology Expert. Все права защищены. <a href="{% url 'landing:privacy' %}">Политика конфиденциальности</a></h1>
     </div>
 </footer>
 {% block extra_js %}
