@@ -21,7 +21,7 @@
 }
 .Service_zag{
     text-align: center;
-    margin-top: 15vh;
+    margin-top: 18vh;
 }
 .Service_descrip{
 
@@ -34,7 +34,7 @@
     }
 
 }
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
       .Wrapper_services{
         margin-top: 5vh;
         flex-direction: row;

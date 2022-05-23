@@ -75,7 +75,7 @@ margin-top: 3vh;
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
 .BothSidesWrapper{
     flex-direction: row;
 }

@@ -39,7 +39,7 @@ h3{
     background-size: contain;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
     .pass_docs_wrapper{
         margin-top: 20vh;
     }

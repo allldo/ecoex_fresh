@@ -232,7 +232,7 @@ padding-bottom: 5vh;
     }
 
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1280px){
     .ServicesGrid{
         flex-direction: row;
     }
@@ -252,6 +252,10 @@ padding-bottom: 5vh;
     }
     .Faq_item{
         width: 30vw;
+        height: 25vh;
+    }
+    .Faq_block>p{
+        font-size: 28px;
     }
     .Faq_title, .Faq_answer{
         width: unset;
@@ -270,33 +274,36 @@ padding-bottom: 5vh;
         display: flex;
         flex-direction: row;
     }
+    .ExactNews__text>p {
+        margin-top: 1vh;
+        padding-bottom: 1vh;
+    }
     .ExactNews__img{
         width: 235px;
         height: 180px;
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
     .Testimonials>p{
         font-size: 55px;
     }
 .Testimonials_items_wrapper{
     display: flex;
     flex-direction: row;
-    width: 65vw;
+    width: 95vw;
     margin: 0 auto;
+    justify-content: space-around;
 }
 .Testimonials_body{
     width: 30vw;
     margin-left: 2vw;
+    font-size: 20px;
 }
 .quote_img {
 width: 48px;
     height: 48px;
 }
-
-
-
 
     .Image_text{
         display: block;
@@ -316,9 +323,11 @@ width: 48px;
         margin-top: 70vh;
     }
     .ServiceItem_img{
-        width: 455px;
-        height: 280px;
-    }
+
+        width: 415px;
+    height: 270px;
+}
+
     .ServiceItem_p{
         width: 25vw;
         font-size: 18px;
@@ -333,15 +342,15 @@ width: 48px;
     .Faq_wrapper{
         display: flex;
         flex-direction: row;
-        width: 75%;
+        width: 95%;
         margin: 0 auto;
-        padding-bottom: 10vh;
+        padding-bottom: 5vh;
     }
     .Faq_block{
-        padding-bottom: 10vh;
+        padding-bottom: 7vh;
     }
     .Faq_item{
-        width: 22vw;
+        width: 30vw;
         padding: 1vw;
         margin: 1vw;
     }
@@ -351,20 +360,21 @@ width: 48px;
     }
     .Number_block{
         flex-direction: row;
-        padding-right: 18vw;
-        padding-left: 18vw;
+        padding-right: 16vw;
+        padding-left: 16vw;
+        justify-content: space-around;
     }
     .Number_number{
         font-size: 65px;
         font-weight: 500;
     }
     .Number_label{
-        font-size: 20px;
+        font-size: 25px;
     }
     .NewsWrapper{
         display: flex;
         flex-direction: row;
-        width: 85%;
+        width: 99%;
         margin: 0 auto;
     }
     .ExactNews__img{
@@ -374,5 +384,45 @@ width: 48px;
     .ExactNews_P_date, .ExactNews__text>a>h4, .ExactNews__text>p{
         font-size: 20px;
         width: 25vw;
+    }
+    .ServicesBlock>h1{
+        font-size: 40px;
+    }
+    .ServicesBlock>p{
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .ServiceItem_img{
+        width: 455px;
+        height: 280px;
+}
+    .Faq_block{
+        padding-bottom: 10vh;
+    }
+    .Faq_wrapper{
+        width: 75%;
+        padding-bottom: 10vh;
+    }
+    .Faq_item{
+    width: 22vw}
+
+    .Testimonials_items_wrapper{
+        width: 65vw;
+        justify-content: unset;
+    }
+    .Testimonials_body {
+    font-size: 18px;
+    }
+    .Number_label{
+        font-size: 20px;
+    }
+    .Number_block{
+        padding-left: 18vw;
+        padding-right: 18vw;
+    }
+    .NewsWrapper{
+        width: 85%;
     }
 }

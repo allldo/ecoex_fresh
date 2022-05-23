@@ -167,7 +167,7 @@ li{
     height: 6vh;
     margin: 1vh 0 0 5vw;
 }
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
     input[type="search"]{
         width: unset;
     }

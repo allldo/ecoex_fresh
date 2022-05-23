@@ -48,7 +48,7 @@ details[open] summary ~ * {
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
     .Faq_block{
         margin-top: 22vh;
         padding-bottom: 10vh;

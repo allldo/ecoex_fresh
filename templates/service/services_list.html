@@ -9,14 +9,14 @@
 
 {% endblock head %}
 {% block content %}
-{#    {% cache 3500 services %}#}
+    {% cache 3500 services %}
     <div class="Services_bg">
     <h3>Услуги</h3>
     <p>Мы предоставляем наиболее качественные услуги в сфере замеров выбросов в атмосферу</p>
     </div>
 <div class="Text_services_wrapper">
-<h1 class="Zag_service">Our vision to provide exceptional service and waste management solutions for businesses has been realized thanks to the efforts of our committed and experienced people.</h1>
-<p class="Descript_services">In 2007 GoGreen identified a significant waste management industry market need. Businesses were looking for a partner large enough and experienced enough to manage high volume and time-critical work with ease, and one who would remain responsive, reliable and truly customer-focused.</p>
+<h1 class="Zag_service">Мы предоставляем решения в области </h1>
+<p class="Descript_services">С 1997 года мы успели поработать над более чем 1000 проектами, это придаёт нам уверенность в том, что мы постоянно совершенствуемся и не стоит на месте.</p>
 </div>
     <div>
     {% for group in Services_group %}
@@ -42,7 +42,7 @@
 {#</div>#}
 {#{% endfor %}#}
 {#</div>#}
-{#    {% endcache %}#}
+    {% endcache %}
         <script src="{% static "js/non_main_page_header.js" %}"></script>
     <script>
 // When the user scrolls the page, execute myFunction

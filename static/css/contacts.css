@@ -15,7 +15,9 @@
     height:0;
     margin-top: 5vh;
 }
-
+.Address_contacts{
+    margin-top: 2vh;
+}
 .map-responsive iframe{
     left:0;
     top:0;
@@ -42,7 +44,7 @@ font-weight: 500;
 .h3_contacts{
 
 }
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
     .WrapperContacts{
     width: 95%;
     margin: 20vh auto;

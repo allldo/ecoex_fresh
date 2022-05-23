@@ -112,11 +112,23 @@ footer{
 color: dimgrey;
 }
 .LocationFooter{
-
+    padding-bottom: 3vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+    margin: 3vh auto 0 auto;
+}
+.LocationFooter>span{
+    color: white;
+    /*margin-left: 2vw;*/
 }
 .LeftSideFooter{
     width: 95%;
     margin: 0 auto;
+}
+.EmailFooter{
+    color: #c1d731;
 }
 .MiddleSideFooter{
     width: 95%;
@@ -139,7 +151,7 @@ margin-top: 3vh;
 }
 .Footer{
     display: flex;
-    height: 95vh;
+    height: 75vh;
     margin: 0 auto;
     flex-direction: column;
     background-color: #252525;
@@ -195,13 +207,14 @@ loader
     width: 64px;
     height: 64px;
     background-size: contain;
+    background-repeat: no-repeat;
     position: center;
     margin-left: auto;
-margin-right: auto;
-left: 0;
-right: 0;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     z-index: 5;
-text-align: center;
+    text-align: center;
 }
 #loader_complete{
      background-image: url("../img/check-mark.png");
@@ -229,15 +242,25 @@ text-align: center;
 
 
 /* media 768px + */
-@media (min-width: 768px) and (max-width: 1279px){
+@media (min-width: 768px) and (max-width: 1100px){
     #menu{
         display: none;
+    }
+    .Image_text{
+        display: block;
+    font-size: 28px;
+    color: white;
+    width: 75vw;
+    position: absolute;
+    z-index: 1;
+    top: 11vh;
+    left: 10vw;
     }
     .LogoImg{
         margin-left: 1vw;
     }
     .LogoText{
-        font-size: 19px;
+        font-size: 18px;
         font-weight: bold;
         width: content-box;
     }
@@ -248,7 +271,6 @@ text-align: center;
     header{
         flex-wrap: nowrap;
         justify-content: space-around;
-
     }
     .HeaderWrapper{
         z-index: 2;
@@ -264,7 +286,7 @@ text-align: center;
         /*transition: all 150ms linear;*/
     }
     .P_header{
-        font-size: 19px;
+        font-size: 17px;
     }
     .P_header>a:hover{
         color: #c1d731;
@@ -296,7 +318,7 @@ text-align: center;
         align-self: center;
     }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1440px) {
     #menu{
         display: none;
     }
@@ -314,7 +336,7 @@ text-align: center;
     .TextHeaderHorizontal{
         display: flex;
         z-index: 5;
-        margin-right: 20vw;
+        margin-right: 4vw;
     }
     .BackgroundImgHeader{
         height: 100%;
@@ -352,7 +374,7 @@ text-align: center;
         padding-bottom: 3vh;
         flex-direction: row;
         height: unset;
-        width: 75%;
+        width: 95%;
     }
     .footer_form>input{
         margin: 5px;
@@ -395,5 +417,13 @@ text-align: center;
     }
     .footer_form>input{
         align-self: center;
+    }
+}
+@media (min-width: 1721px) {
+        .TextHeaderHorizontal{
+        margin-right: 20vw;
+    }
+        .Footer{
+        width: 75%;
     }
 }

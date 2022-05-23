@@ -76,19 +76,19 @@
 }
 .Text_services_wrapper{
     width: 90%;
-    margin: 5vh auto 0 auto;
+    margin: 13vh auto 0 auto;
 }
     .GroupText{
         text-align: center;
         margin-top: 5vh;
     }
-@media (max-width: 404px) {
-    .Service_img {
-        width: 100%;
-        max-height: 300px;
-        background-size: cover;
-    }
-}
+/*@media (max-width: 404px) {*/
+/*    .Service_img {*/
+/*        width: 100%;*/
+/*        max-height: 300px;*/
+/*        background-size: cover;*/
+/*    }*/
+/*}*/
 
 @media (min-width: 1280px) {
     .GroupText{
@@ -176,4 +176,8 @@
     font-weight: 500;
     margin-top: 9vh;
 }
+}
+
+@media (min-width: 1721px) {
+
 }
