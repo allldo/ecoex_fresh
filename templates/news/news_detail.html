@@ -1,9 +1,12 @@
 {% extends 'landing/base.html' %}
 {% load static %}
+{% load cache %}
 {% block head %}
+    {% cache 3600 news_det %}
     <script type="text/javascript" src="https://vk.com/js/api/share.js?93" charset="windows-1251"></script>
-<link rel="stylesheet" href="{% static 'css/news_detail.css' %}">
+        <link rel="stylesheet" href="{% static 'css/news_detail.css' %}">
         <link rel="stylesheet" href="{% static 'css/header_non_main.css' %}">
+    {% endcache %}
 <title>{{ Exact_news.title }}</title>
 {% endblock head %}
 {% block content %}

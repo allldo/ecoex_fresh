@@ -1,9 +1,12 @@
 {% extends 'landing/base.html' %}
 {% load static %}
+{% load cache %}
 {% block head %}
     <title>{{ service_obj.title }}</title>
+    {% cache 3600 detail %}
     <link rel="stylesheet" href="{% static 'css/service_detail.css' %}">
     <link rel="stylesheet" href="{% static 'css/header_non_main.css' %}">
+    {% endcache %}
     <meta name="description" content="{{ service_obj.title }} - одна из наших услуг, мы можем вас проконсультировать, для этого воспользуйтесь формой снизу сайта">
 
 {% endblock head %}

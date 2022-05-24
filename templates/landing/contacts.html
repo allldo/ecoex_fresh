@@ -1,11 +1,14 @@
 {% extends 'landing/base.html' %}
 {% load static %}
+    {% load cache %}
 {% block head %}
     <title>Контакты</title>
+    {% cache 3600 contacts_header %}
     <link rel="stylesheet" href="{% static 'css/contacts.css' %}">
     <link rel="stylesheet" href="{% static 'css/header_non_main.css' %}">
     <link rel="stylesheet" href="{% static 'js/ui-components-master/simple-adaptive-slider/css/simple-adaptive-slider.css' %}">
     <script defer src="{% static 'js/ui-components-master/simple-adaptive-slider/js/simple-adaptive-slider.js' %}"></script>
+    {% endcache %}
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       // инициализация слайдера
@@ -19,7 +22,7 @@
     <meta name="description" content="У нас есть 2 филиала в разных городах, обратиться можете по телефону">
 {% endblock head %}
 {% block content %}
-    {% load cache %}
+
     {% cache 4000 contacts %}
     {% include 'parts/upper_kok.html' %}
     <section class="WrapperContacts">

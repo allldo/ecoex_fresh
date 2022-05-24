@@ -1,14 +1,18 @@
 {% extends 'landing/base.html' %}
 {% load static %}
+    {% load cache %}
 {% block head %}
     <title>Разрешительные документы</title>
+    {% cache 3600 docs %}
     <link rel="stylesheet" href="{% static 'css/pass_docs.css' %}">
     <link rel="stylesheet" href="{% static 'css/header_non_main.css' %}">
+    {% endcache %}
     <meta name="description" content="Разрешительные документы играют важную роль в сфере экологии, это повышает доверие клиента и осознание того, что работа будет выполнена качественно и в срок">
 
 {% endblock head %}
 {% block content %}
-    {% load cache %}
+
+    {% cache 3600 docs_body %}
     {% include 'parts/upper_lake.html' %}
     {% load truncate_docs %}
     <div class="pass_docs_wrapper">
@@ -81,7 +85,7 @@
     {% endfor %}
 </div>
         </div>
-
+{% endcache %}
     <script>
     function downloadURI(uri, name)
 {

@@ -1,10 +1,12 @@
 {% extends 'landing/base.html' %}
 {% load static %}
+{% load cache %}
 {% block head %}
 <title>Новости</title>
+    {% cache 3600 listr %}
 <link rel="stylesheet" href="{% static 'css/news_list.css' %}">
         <link rel="stylesheet" href="{% static 'css/header_non_main.css' %}">
-
+{% endcache %}
 {% endblock head %}
 {% block content %}
     <div class="Search_background">

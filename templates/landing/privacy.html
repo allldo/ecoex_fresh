@@ -1,9 +1,12 @@
 {% extends 'landing/base.html' %}
 {% load static %}
+{% load cache %}
 {% block head %}
     <title>Политика конфиденциальности</title>
+    {% cache 3600 privacy %}
         <link rel="stylesheet" href="{% static 'css/about_us.css' %}">
     <link rel="stylesheet" href="{% static 'css/header_non_main.css' %}">
+    {% endcache %}
 {% endblock head %}
 
 {% block content %}
