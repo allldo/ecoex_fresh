@@ -394,6 +394,12 @@ width: 48px;
 }
 
 @media (min-width: 1920px) {
+    .ServiceItem_p {
+        width: 15vw;
+    }
+    .ServicesGrid{
+        width: 75%;
+    }
     .ServiceItem_img{
         width: 455px;
         height: 280px;
@@ -423,6 +429,6 @@ width: 48px;
         padding-right: 18vw;
     }
     .NewsWrapper{
-        width: 85%;
+        width: 75%;
     }
 }

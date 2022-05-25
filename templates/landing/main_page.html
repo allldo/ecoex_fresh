@@ -26,8 +26,8 @@ qwe qwe fan
     <div class="ServicesGrid">
     {% for service in Service %}
         <div class="ServiceItem">
-            <a href="{{ service.get_absolute_url }}"><img class="ServiceItem_img" src="{{ service.image.url }}" ></a>
-            <a href="{{ service.get_absolute_url }}" class="ServiceItem_h2">{{ service.title }}</a>
+            <a href="{{ service.get_absolute_url }}"><img alt="{{ service.title }}" class="ServiceItem_img" src="{{ service.image.url }}" ></a>
+            <a href="{{ service.get_absolute_url }}" class="ServiceItem_h2">{{ service.title|truncatechars:45 }}</a>
             <p class="ServiceItem_p"> {{ service.description|striptags|truncatechars:75  }} </p>
         </div>
         {% endfor %}
