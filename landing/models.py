@@ -65,3 +65,6 @@ class PassDocs(models.Model):
 
 class AboutUs(models.Model):
     text = models.TextField()
+
+
+# class AirQuality():

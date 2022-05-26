@@ -1,8 +1,9 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 
 from projects.models import Project
 
 
-def project_detail(request, id):
-    qs = Project.objects.filter(id=id)
-    return qs
+@login_required
+def air_quality(request):
+    return render(request, 'landing/air_qual.html')
