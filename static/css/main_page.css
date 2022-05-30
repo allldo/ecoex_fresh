@@ -6,7 +6,7 @@
 .ServicesBlock{
     background-color: #fafafa;
     padding-bottom: 3vh;
-    margin-top: 17vh;
+    margin-top: 23vh;
 }
 .ServiceItem{
     margin-top: 4vh;
@@ -17,6 +17,10 @@
 .ServicesBlock>h1, .ServicesBlock>p{
     text-align: center;
     color: #E8D8BD;
+}
+.ServicesBlock>h1{
+    color: black;
+    font-weight: 500;
 }
 .ServicesGrid{
     width: 95%;
@@ -78,7 +82,7 @@ margin: 0 auto;
 .Faq_block{
 background-color: #f7f4f0;
 text-align: center;
-margin-top: 5vh;
+/*margin-top: 5vh;*/
 padding-bottom: 5vh;
 }
 .Faq_item{
@@ -131,8 +135,7 @@ padding-bottom: 5vh;
     margin-top: 5vh;
     font-size: 25px;
     text-align: center;
-    font-weight: 700;
-    font-style: italic;
+    font-weight: 500;
 }
 .Testimonial_item{
     display: flex;
@@ -320,7 +323,7 @@ width: 48px;
         width: 88%;
     }
     .ServicesBlock{
-        margin-top: 70vh;
+        margin-top: 63vh;
     }
     .ServiceItem_img{
 
@@ -389,7 +392,7 @@ width: 48px;
         font-size: 40px;
     }
     .ServicesBlock>p{
-        font-size: 30px;
+        font-size: 25px;
     }
 }
 
@@ -405,17 +408,17 @@ width: 48px;
         height: 280px;
 }
     .Faq_block{
-        padding-bottom: 10vh;
+        padding-bottom: 6vh;
     }
     .Faq_wrapper{
         width: 75%;
-        padding-bottom: 10vh;
+        padding-bottom: 3vh;
     }
     .Faq_item{
     width: 22vw}
 
     .Testimonials_items_wrapper{
-        width: 65vw;
+        width: 75vw;
         justify-content: unset;
     }
     .Testimonials_body {

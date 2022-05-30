@@ -35,3 +35,8 @@
         background-size: contain;
     }
 }
+@media (min-width: 1280px) {
+    .Services_bg{
+        background-image: url("../img/pc_img/high_resol_lake.jpg");
+    }
+}

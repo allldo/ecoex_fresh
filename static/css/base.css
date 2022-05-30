@@ -17,8 +17,8 @@ header{
     padding-bottom: 15vw;
 }
 .BackgroundImgHeader{
-    background-image: url("../img/header_img/panoram.jpg");
-    height: 35vh;
+    background-image: url("../img/header_img/main_bg.jpg");
+    height: 45vh;
      width: 100%;
     position: absolute;
     background-size: cover;
@@ -151,7 +151,6 @@ margin-top: 3vh;
 }
 .Footer{
     display: flex;
-    height: 75vh;
     margin: 0 auto;
     flex-direction: column;
     background-color: #252525;
