@@ -52,9 +52,7 @@ def news_search(request):
 
     if 'q' in request.GET:
         query = request.GET.get('q')
-        print(query)
         paginator = Paginator(News.objects.filter(Q(title__icontains=query)).order_by('-date'), 1)
-        print(News.objects.filter(Q(title__icontains=query)))
         try:
             news = paginator.page(page)
         except PageNotAnInteger:
