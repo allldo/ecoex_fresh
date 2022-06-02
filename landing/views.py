@@ -11,7 +11,7 @@ from landing.models import FAQ, News, Service, PassDocs, ServiceGroup, AboutUs
 
 def main_page(request):
     context = {}
-    context['Service'] = Service.objects.all()[:3]
+    context['Service'] = Service.objects.all()[5:8]
     context['FAQ'] = FAQ.objects.all()[:3]
     context['Latest_News'] = News.objects.all()[:3]
     return render(request, 'landing/main_page.html', context)
