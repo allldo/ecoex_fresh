@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tinymce',
     'django.contrib.sitemaps',
     #apps
     'ecology_full_new',
@@ -126,10 +125,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 STATIC_URL = '/static/'
-# STATICFILES_DIRS = [
-#  os.path.join(BASE_DIR, 'static')
-#  ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+ os.path.join(BASE_DIR, 'static')
+ ]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
@@ -149,45 +148,10 @@ EMAIL_HOST_PASSWORD = "FBp4egLF9H9zy7sMPNc8"
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
-
-TINYMCE_DEFAULT_CONFIG = {
-
-    'height': 360,
-
-    'width': 1000,
-
-    'cleanup_on_startup': True,
-
-    'custom_undo_redo_levels': 20,
-
-    'selector': 'textarea',
-
-    'theme': 'silver',
-
-    'plugins': '''
-   textcolor save link image media preview codesample contextmenu
-   table code lists fullscreen insertdatetime nonbreaking
-   contextmenu directionality searchreplace wordcount visualblocks
-   visualchars code fullscreen autolink lists charmap print hr
-   anchor pagebreak
-   ''',
-
-    'toolbar1': '''
-   fullscreen preview bold italic underline | fontselect,
-   fontsizeselect | forecolor backcolor | alignleft alignright |
-   aligncenter alignjustify | indent outdent | bullist numlist table |
-   | link image media | codesample |
-   ''',
-
-    'toolbar2': '''
-   visualblocks visualchars |
-   charmap hr pagebreak nonbreaking anchor | code |
-   ''',
-
-    'contextmenu': 'formats | link image',
-
-    'menubar': True,
-
-    'statusbar': True,
-
-}
+# CELERY STUFF
+BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'Asia/Almaty'

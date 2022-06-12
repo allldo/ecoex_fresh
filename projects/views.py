@@ -1,8 +1,11 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 
-from projects.models import Project
+from projects.models import City
 
 
-def project_detail(request, id):
-    qs = Project.objects.filter(id=id)
-    return qs
+@login_required
+def air_quality(request):
+    city_objects = City.objects.all()
+    context = {'city_objects': city_objects}
+    return render(request, 'landing/air_qual.html', context)
