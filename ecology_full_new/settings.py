@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-45+ewuh2q%1z_!xk&0d65b7zl^gpol7ao$*d#wfd9$)pms3vk4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = ['ecology-expert.com.kz', 'www.ecology-expert.com.kz']
+CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*']
 
 # Application definition
 
@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tinymce',
     'django.contrib.sitemaps',
     #apps
     'ecology_full_new',
@@ -129,7 +128,12 @@ STATIC_URL = '/static/'
 # STATICFILES_DIRS = [
 #  os.path.join(BASE_DIR, 'static')
 #  ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+if not DEBUG:
+    STATIC_ROOT = '/home/aldo/ecoex_fresh/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, '/static/'),
+]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
