@@ -3,5 +3,9 @@
 <title>Качество воздуха</title>
 {% endblock %}
 {% block content %}
-    
+    {% for x in city_objects %}
+        {{ x.name }}
+        {{ x.aqi_us }}
+        {{ x.main_pollutant_us }}
+    {% endfor %}
 {% endblock content %}
