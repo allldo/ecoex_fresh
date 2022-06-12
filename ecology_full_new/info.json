@@ -1,0 +1,33 @@
+{
+    "status": "success",
+    "data": {
+        "city": "Almaty",
+        "state": "Almaty Qalasy",
+        "country": "Kazakhstan",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                76.92861,
+                43.25667
+            ]
+        },
+        "current": {
+            "pollution": {
+                "ts": "2022-05-26T12:00:00.000Z",
+                "aqius": 39,
+                "mainus": "p2",
+                "aqicn": 14,
+                "maincn": "p1"
+            },
+            "weather": {
+                "ts": "2022-05-26T12:00:00.000Z",
+                "tp": 29,
+                "pr": 1011,
+                "hu": 37,
+                "ws": 2,
+                "wd": 60,
+                "ic": "03d"
+            }
+        }
+    }
+}

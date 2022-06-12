@@ -125,6 +125,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 STATIC_URL = '/static/'
+
 # STATICFILES_DIRS = [
 #  os.path.join(BASE_DIR, 'static')
 #  ]
@@ -134,6 +135,12 @@ if not DEBUG:
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, '/static/'),
 ]
+=======
+STATICFILES_DIRS = [
+ os.path.join(BASE_DIR, 'static')
+ ]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
@@ -153,6 +160,7 @@ EMAIL_HOST_PASSWORD = "FBp4egLF9H9zy7sMPNc8"
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
+<<<<<<< HEAD
 
 TINYMCE_DEFAULT_CONFIG = {
 
@@ -195,3 +203,12 @@ TINYMCE_DEFAULT_CONFIG = {
     'statusbar': True,
 
 }
+=======
+# CELERY STUFF
+BROKER_URL = 'redis://localhost:6379'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'Asia/Almaty'
+>>>>>>> 3ab39d41d9b26562733bd64546bf52d83f0b9f6a
