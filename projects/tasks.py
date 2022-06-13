@@ -10,6 +10,7 @@ api_key = '4ad6e920-3cd1-4f0c-987e-e95550d1f998'
 def request_to_source():
     Almaty = get_object_or_404(City, name='Almaty')
     Astana = get_object_or_404(City, name='Astana')
+    print(Almaty, Astana)
     urls = [f'http://api.airvisual.com/v2/city?city=Nur-sultan&state=Nur-sultan&country=Kazakhstan&key={api_key}',
             f'http://api.airvisual.com/v2/city?city=Almaty&state=Almaty Qalasy&country=Kazakhstan&key={api_key}']
     for url in urls:
