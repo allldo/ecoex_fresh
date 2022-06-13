@@ -18,9 +18,11 @@ def request_to_source():
         if k['data']['city'] == 'Nur-Sultan':
             Astana.aqi_us = k['data']['current']['pollution']['aqius']
             Astana.main_pollutant_us = k['data']['current']['pollution']['mainus']
+            Astana.save()
         elif k['data']['city'] == 'Almaty':
             Almaty.aqi_us = k['data']['current']['pollution']['aqius']
             Almaty.main_pollutant_us = k['data']['current']['pollution']['mainus']
+            Almaty.save()
         # elif k['data']['city'] == 'Atyrau':
         #     Astana.aqi_us = k['data']['current']['pollution']['aqius']
         #     Astana.main_pollutant_us = k['data']['current']['pollution']['mainus']
